@@ -52,11 +52,19 @@ def fmt_plan(x: Decimal) -> str:
 
 
 def months_needed_option(first: date, n: int, freq_days: int) -> int:
-    """Option 1 (locked): ceil(((last - first).days + 1) / 30)."""
+    """LOCKED #1: whole months between first and last payment date.
+
+    Derived from the matched option's real dates, NOT payment count.
+    Single-payment options span 0 months.
+    """
     if n <= 1 or not freq_days:
-        return 1
-    last = first + timedelta(days=(n - 1) * freq_days)
-    return math.ceil(((last - first).days + 1) / 30)
+        return 0
+    try:
+        from common import installment_last_date, months_span
+    except ImportError:  # pragma: no cover - fallback when run as package
+        from code.common import installment_last_date, months_span  # type: ignore
+    last = installment_last_date(first, n, freq_days)
+    return months_span(first, last)
 
 
 def installment_schedule(opt: dict):

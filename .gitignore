@@ -1,3 +1,8 @@
 log.txt
 .env
 __pycache__/
+.venv/
+code/.venv/
+code/__pycache__/
+code/state/
+code/.usage_log.jsonl

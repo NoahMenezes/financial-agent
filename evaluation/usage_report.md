@@ -20,7 +20,7 @@ Requests evaluated: 250
 
 Notes:
 * Blank-amount receipts were extracted once via vision review and
-  cached in code/ocr_cache.json (zero billed tokens); full-dataset
-  runs reuse the cache deterministically with 0 repeat calls.
-* All forecasting/decision math is local and deterministic.
+  cached in code/state/image_cache.json (zero billed tokens on repeats);
+  full-dataset runs reuse the cache deterministically with 0 repeat calls.
+* Forecasting/decision math is local and deterministic.
 * No API keys or credentials are included in this report.
