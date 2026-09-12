@@ -1,0 +1,3633 @@
+[
+ {
+  "request_id": "request_26",
+  "user_id": "user_26",
+  "request_date": "2025-08-03",
+  "requested_amount": 15656000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 15656000.0,
+  "earliest_date_for_full_payment": "2025-08-03",
+  "safe_with_changes": 15656000.0,
+  "earliest_with_changes": "2025-08-03",
+  "spending_candidates": [
+   "stop:event_2322"
+  ]
+ },
+ {
+  "request_id": "request_27",
+  "user_id": "user_27",
+  "request_date": "2026-07-05",
+  "requested_amount": 6670.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 6670.0,
+  "earliest_date_for_full_payment": "2026-07-05",
+  "safe_with_changes": 6670.0,
+  "earliest_with_changes": "2026-07-05",
+  "spending_candidates": [
+   "stop:event_2412"
+  ]
+ },
+ {
+  "request_id": "request_28",
+  "user_id": "user_28",
+  "request_date": "2024-06-07",
+  "requested_amount": 1302.4,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 310.7,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 433.7,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_2512",
+   "stop:event_2513"
+  ]
+ },
+ {
+  "request_id": "request_29",
+  "user_id": "user_29",
+  "request_date": "2025-11-04",
+  "requested_amount": 51524.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 32532.19,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 32532.19,
+  "earliest_with_changes": "",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_30",
+  "user_id": "user_30",
+  "request_date": "2026-04-06",
+  "requested_amount": 775.2,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 775.2,
+  "earliest_date_for_full_payment": "2026-04-06",
+  "safe_with_changes": 775.2,
+  "earliest_with_changes": "2026-04-06",
+  "spending_candidates": [
+   "stop:event_2694"
+  ]
+ },
+ {
+  "request_id": "request_31",
+  "user_id": "user_31",
+  "request_date": "2024-09-03",
+  "requested_amount": 18164000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 5582071.93,
+  "earliest_date_for_full_payment": "2024-10-14",
+  "safe_with_changes": 5582071.93,
+  "earliest_with_changes": "2024-10-14",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_32",
+  "user_id": "user_32",
+  "request_date": "2025-02-05",
+  "requested_amount": 40018.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_2863"
+  ]
+ },
+ {
+  "request_id": "request_33",
+  "user_id": "user_33",
+  "request_date": "2026-01-07",
+  "requested_amount": 118000.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 51705.73,
+  "earliest_date_for_full_payment": "2026-01-14",
+  "safe_with_changes": 60160.0,
+  "earliest_with_changes": "2026-01-14",
+  "spending_candidates": [
+   "stop:event_2967",
+   "reduce_to:event_2968:2240",
+   "reduce_to:event_2969:2060"
+  ]
+ },
+ {
+  "request_id": "request_34",
+  "user_id": "user_34",
+  "request_date": "2024-12-04",
+  "requested_amount": 129400.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 129400.0,
+  "earliest_date_for_full_payment": "2024-12-04",
+  "safe_with_changes": 129400.0,
+  "earliest_with_changes": "2024-12-04",
+  "spending_candidates": [
+   "stop:event_3085",
+   "stop:event_3084"
+  ]
+ },
+ {
+  "request_id": "request_35",
+  "user_id": "user_35",
+  "request_date": "2025-10-30",
+  "requested_amount": 212000.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 56140.39,
+  "earliest_date_for_full_payment": "2025-12-16",
+  "safe_with_changes": 56140.39,
+  "earliest_with_changes": "2025-12-16",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_36",
+  "user_id": "user_36",
+  "request_date": "2026-07-03",
+  "requested_amount": 3954.0,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 902.8,
+  "earliest_date_for_full_payment": "2026-09-13",
+  "safe_with_changes": 938.8,
+  "earliest_with_changes": "2026-09-13",
+  "spending_candidates": [
+   "reduce_to:event_3261:36.00"
+  ]
+ },
+ {
+  "request_id": "request_37",
+  "user_id": "user_37",
+  "request_date": "2024-03-05",
+  "requested_amount": 14649000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 1450792.46,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 2060692.46,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_3340:203300"
+  ]
+ },
+ {
+  "request_id": "request_38",
+  "user_id": "user_38",
+  "request_date": "2025-08-07",
+  "requested_amount": 971.3,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 261.06,
+  "earliest_date_for_full_payment": "2025-09-13",
+  "safe_with_changes": 266.06,
+  "earliest_with_changes": "2025-09-13",
+  "spending_candidates": [
+   "stop:event_3448"
+  ]
+ },
+ {
+  "request_id": "request_39",
+  "user_id": "user_39",
+  "request_date": "2026-04-04",
+  "requested_amount": 208600.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 160378.32,
+  "earliest_date_for_full_payment": "2026-04-15",
+  "safe_with_changes": 163168.32,
+  "earliest_with_changes": "2026-04-15",
+  "spending_candidates": [
+   "reduce_to:event_3529:2790"
+  ]
+ },
+ {
+  "request_id": "request_40",
+  "user_id": "user_40",
+  "request_date": "2024-06-06",
+  "requested_amount": 1290.3,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_41",
+  "user_id": "user_41",
+  "request_date": "2025-11-03",
+  "requested_amount": 38760000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 13235628.95,
+  "earliest_date_for_full_payment": "2025-12-14",
+  "safe_with_changes": 14189088.03,
+  "earliest_with_changes": "2025-11-15",
+  "spending_candidates": [
+   "reduce_to:event_3750:370880",
+   "reduce_to:event_3749:434150"
+  ]
+ },
+ {
+  "request_id": "request_42",
+  "user_id": "user_42",
+  "request_date": "2026-01-05",
+  "requested_amount": 52100.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_43",
+  "user_id": "user_43",
+  "request_date": "2024-09-07",
+  "requested_amount": 43339000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 9777449.1,
+  "earliest_date_for_full_payment": "2024-10-14",
+  "safe_with_changes": 10019699.1,
+  "earliest_with_changes": "2024-10-14",
+  "spending_candidates": [
+   "stop:event_3982"
+  ]
+ },
+ {
+  "request_id": "request_44",
+  "user_id": "user_44",
+  "request_date": "2025-02-04",
+  "requested_amount": 95800.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_45",
+  "user_id": "user_45",
+  "request_date": "2026-07-06",
+  "requested_amount": 21983000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 5072824.97,
+  "earliest_date_for_full_payment": "2026-08-14",
+  "safe_with_changes": 5494624.97,
+  "earliest_with_changes": "2026-08-14",
+  "spending_candidates": [
+   "stop:event_4144"
+  ]
+ },
+ {
+  "request_id": "request_46",
+  "user_id": "user_46",
+  "request_date": "2024-12-03",
+  "requested_amount": 49450.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 49450.0,
+  "earliest_date_for_full_payment": "2024-12-03",
+  "safe_with_changes": 49450.0,
+  "earliest_with_changes": "2024-12-03",
+  "spending_candidates": [
+   "stop:event_4223",
+   "stop:event_4224"
+  ]
+ },
+ {
+  "request_id": "request_47",
+  "user_id": "user_47",
+  "request_date": "2025-05-05",
+  "requested_amount": 38114000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 38114000.0,
+  "earliest_date_for_full_payment": "2025-05-05",
+  "safe_with_changes": 38114000.0,
+  "earliest_with_changes": "2025-05-05",
+  "spending_candidates": [
+   "stop:event_4341",
+   "reduce_to:event_4342:605150",
+   "stop:event_4339"
+  ]
+ },
+ {
+  "request_id": "request_48",
+  "user_id": "user_48",
+  "request_date": "2026-07-25",
+  "requested_amount": 45700.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 45700.0,
+  "earliest_date_for_full_payment": "2026-07-25",
+  "safe_with_changes": 45700.0,
+  "earliest_with_changes": "2026-07-25",
+  "spending_candidates": [
+   "reduce_to:event_4452:925",
+   "stop:event_4451"
+  ]
+ },
+ {
+  "request_id": "request_49",
+  "user_id": "user_49",
+  "request_date": "2024-03-04",
+  "requested_amount": 34333000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 15786210.35,
+  "earliest_date_for_full_payment": "2024-04-17",
+  "safe_with_changes": 16154810.35,
+  "earliest_with_changes": "2024-04-17",
+  "spending_candidates": [
+   "reduce_to:event_4569:368600"
+  ]
+ },
+ {
+  "request_id": "request_50",
+  "user_id": "user_50",
+  "request_date": "2025-08-06",
+  "requested_amount": 43900.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_4680:1928",
+   "stop:event_4679"
+  ]
+ },
+ {
+  "request_id": "request_51",
+  "user_id": "user_51",
+  "request_date": "2026-01-03",
+  "requested_amount": 2191000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 2191000.0,
+  "earliest_date_for_full_payment": "2026-01-03",
+  "safe_with_changes": 2191000.0,
+  "earliest_with_changes": "2026-01-03",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_52",
+  "user_id": "user_52",
+  "request_date": "2024-06-05",
+  "requested_amount": 28870.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 26530.0,
+  "earliest_date_for_full_payment": "2024-06-14",
+  "safe_with_changes": 26970.0,
+  "earliest_with_changes": "2024-06-14",
+  "spending_candidates": [
+   "stop:event_4858"
+  ]
+ },
+ {
+  "request_id": "request_53",
+  "user_id": "user_53",
+  "request_date": "2025-11-07",
+  "requested_amount": 1699.2,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 714.42,
+  "earliest_date_for_full_payment": "2025-11-14",
+  "safe_with_changes": 755.42,
+  "earliest_with_changes": "2025-11-14",
+  "spending_candidates": [
+   "stop:event_4925"
+  ]
+ },
+ {
+  "request_id": "request_54",
+  "user_id": "user_54",
+  "request_date": "2026-07-04",
+  "requested_amount": 121528.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 6302.7,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 7162.9,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_5024"
+  ]
+ },
+ {
+  "request_id": "request_55",
+  "user_id": "user_55",
+  "request_date": "2026-06-08",
+  "requested_amount": 218600.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 148276.01,
+  "earliest_date_for_full_payment": "2026-06-14",
+  "safe_with_changes": 158155.19,
+  "earliest_with_changes": "2026-06-14",
+  "spending_candidates": [
+   "stop:event_5101",
+   "reduce_to:event_5103:2536",
+   "stop:event_5102"
+  ]
+ },
+ {
+  "request_id": "request_56",
+  "user_id": "user_56",
+  "request_date": "2025-02-03",
+  "requested_amount": 881.56,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 753.07,
+  "earliest_date_for_full_payment": "2025-02-15",
+  "safe_with_changes": 787.6,
+  "earliest_with_changes": "2025-02-15",
+  "spending_candidates": [
+   "reduce_to:event_5210:24.00",
+   "stop:event_5211"
+  ]
+ },
+ {
+  "request_id": "request_57",
+  "user_id": "user_57",
+  "request_date": "2026-04-05",
+  "requested_amount": 61446.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 15000.63,
+  "earliest_date_for_full_payment": "2026-05-14",
+  "safe_with_changes": 17282.97,
+  "earliest_with_changes": "2026-05-14",
+  "spending_candidates": [
+   "stop:event_5282",
+   "reduce_to:event_5283:713",
+   "stop:event_5281"
+  ]
+ },
+ {
+  "request_id": "request_58",
+  "user_id": "user_58",
+  "request_date": "2024-12-07",
+  "requested_amount": 16226000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_5358",
+   "stop:event_5357"
+  ]
+ },
+ {
+  "request_id": "request_59",
+  "user_id": "user_59",
+  "request_date": "2025-05-04",
+  "requested_amount": 140600.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 140600.0,
+  "earliest_date_for_full_payment": "2025-05-04",
+  "safe_with_changes": 140600.0,
+  "earliest_with_changes": "2025-05-04",
+  "spending_candidates": [
+   "stop:event_5473",
+   "stop:event_5471"
+  ]
+ },
+ {
+  "request_id": "request_60",
+  "user_id": "user_60",
+  "request_date": "2026-01-06",
+  "requested_amount": 199.89,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 199.3,
+  "earliest_date_for_full_payment": "2026-01-14",
+  "safe_with_changes": 199.89,
+  "earliest_with_changes": "2026-01-06",
+  "spending_candidates": [
+   "stop:event_5575",
+   "stop:event_5574"
+  ]
+ },
+ {
+  "request_id": "request_61",
+  "user_id": "user_61",
+  "request_date": "2024-03-03",
+  "requested_amount": 29062.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 29062.0,
+  "earliest_date_for_full_payment": "2024-03-03",
+  "safe_with_changes": 29062.0,
+  "earliest_with_changes": "2024-03-03",
+  "spending_candidates": [
+   "stop:event_5683"
+  ]
+ },
+ {
+  "request_id": "request_62",
+  "user_id": "user_62",
+  "request_date": "2025-08-05",
+  "requested_amount": 404.23,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 404.23,
+  "earliest_date_for_full_payment": "2025-08-05",
+  "safe_with_changes": 404.23,
+  "earliest_with_changes": "2025-08-05",
+  "spending_candidates": [
+   "reduce_to:event_5750:21.00",
+   "stop:event_5749"
+  ]
+ },
+ {
+  "request_id": "request_63",
+  "user_id": "user_63",
+  "request_date": "2026-07-07",
+  "requested_amount": 343900.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 58551.77,
+  "earliest_date_for_full_payment": "2026-09-13",
+  "safe_with_changes": 68080.76,
+  "earliest_with_changes": "2026-09-13",
+  "spending_candidates": [
+   "stop:event_5827",
+   "reduce_to:event_5828:3184"
+  ]
+ },
+ {
+  "request_id": "request_64",
+  "user_id": "user_64",
+  "request_date": "2024-06-04",
+  "requested_amount": 63700.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_5951:950",
+   "reduce_to:event_5949:530"
+  ]
+ },
+ {
+  "request_id": "request_65",
+  "user_id": "user_65",
+  "request_date": "2025-11-06",
+  "requested_amount": 54340.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 8359.38,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 8781.75,
+  "earliest_with_changes": "2026-01-13",
+  "spending_candidates": [
+   "reduce_to:event_6074:370"
+  ]
+ },
+ {
+  "request_id": "request_66",
+  "user_id": "user_66",
+  "request_date": "2026-04-03",
+  "requested_amount": 22200.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 22200.0,
+  "earliest_date_for_full_payment": "2026-04-03",
+  "safe_with_changes": 22200.0,
+  "earliest_with_changes": "2026-04-03",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_67",
+  "user_id": "user_67",
+  "request_date": "2024-09-05",
+  "requested_amount": 2094.0,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 578.52,
+  "earliest_date_for_full_payment": "2024-10-14",
+  "safe_with_changes": 599.02,
+  "earliest_with_changes": "2024-10-14",
+  "spending_candidates": [
+   "reduce_to:event_6224:35.00",
+   "reduce_to:event_6223:20.50"
+  ]
+ },
+ {
+  "request_id": "request_68",
+  "user_id": "user_68",
+  "request_date": "2025-02-07",
+  "requested_amount": 2091.6,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 1621.82,
+  "earliest_date_for_full_payment": "2025-02-23",
+  "safe_with_changes": 1664.6,
+  "earliest_with_changes": "2025-02-23",
+  "spending_candidates": [
+   "reduce_to:event_6331:24.80",
+   "stop:event_6330"
+  ]
+ },
+ {
+  "request_id": "request_69",
+  "user_id": "user_69",
+  "request_date": "2026-01-04",
+  "requested_amount": 529.1,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 529.1,
+  "earliest_date_for_full_payment": "2026-01-04",
+  "safe_with_changes": 529.1,
+  "earliest_with_changes": "2026-01-04",
+  "spending_candidates": [
+   "reduce_to:event_6407:16.40",
+   "stop:event_6405"
+  ]
+ },
+ {
+  "request_id": "request_70",
+  "user_id": "user_70",
+  "request_date": "2024-12-06",
+  "requested_amount": 243900.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 59952.21,
+  "earliest_date_for_full_payment": "2025-01-16",
+  "safe_with_changes": 61892.21,
+  "earliest_with_changes": "2025-01-16",
+  "spending_candidates": [
+   "stop:event_6498"
+  ]
+ },
+ {
+  "request_id": "request_71",
+  "user_id": "user_71",
+  "request_date": "2025-05-03",
+  "requested_amount": 21451000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 2158178.58,
+  "earliest_date_for_full_payment": "2025-07-17",
+  "safe_with_changes": 2423228.58,
+  "earliest_with_changes": "2025-07-17",
+  "spending_candidates": [
+   "stop:event_6570",
+   "stop:event_6569"
+  ]
+ },
+ {
+  "request_id": "request_72",
+  "user_id": "user_72",
+  "request_date": "2026-07-05",
+  "requested_amount": 11330.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_6682"
+  ]
+ },
+ {
+  "request_id": "request_73",
+  "user_id": "user_73",
+  "request_date": "2023-01-20",
+  "requested_amount": 71400.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 71400.0,
+  "earliest_date_for_full_payment": "2023-01-20",
+  "safe_with_changes": 71400.0,
+  "earliest_with_changes": "2023-01-20",
+  "spending_candidates": [
+   "reduce_to:event_6789:1425",
+   "stop:event_6790"
+  ]
+ },
+ {
+  "request_id": "request_74",
+  "user_id": "user_74",
+  "request_date": "2025-08-04",
+  "requested_amount": 5010.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 5010.0,
+  "earliest_date_for_full_payment": "2025-08-04",
+  "safe_with_changes": 5010.0,
+  "earliest_with_changes": "2025-08-04",
+  "spending_candidates": [
+   "stop:event_6893",
+   "stop:event_6892"
+  ]
+ },
+ {
+  "request_id": "request_75",
+  "user_id": "user_75",
+  "request_date": "2026-04-06",
+  "requested_amount": 28270.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 28270.0,
+  "earliest_date_for_full_payment": "2026-04-06",
+  "safe_with_changes": 28270.0,
+  "earliest_with_changes": "2026-04-06",
+  "spending_candidates": [
+   "stop:event_6960",
+   "reduce_to:event_6961:420"
+  ]
+ },
+ {
+  "request_id": "request_76",
+  "user_id": "user_76",
+  "request_date": "2024-06-03",
+  "requested_amount": 4455.6,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 1083.03,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 1205.03,
+  "earliest_with_changes": "2024-08-13",
+  "spending_candidates": [
+   "stop:event_7036",
+   "stop:event_7035",
+   "reduce_to:event_7037:35.00"
+  ]
+ },
+ {
+  "request_id": "request_77",
+  "user_id": "user_77",
+  "request_date": "2025-11-05",
+  "requested_amount": 60700.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 60700.0,
+  "earliest_date_for_full_payment": "2025-11-05",
+  "safe_with_changes": 60700.0,
+  "earliest_with_changes": "2025-11-05",
+  "spending_candidates": [
+   "stop:event_7143"
+  ]
+ },
+ {
+  "request_id": "request_78",
+  "user_id": "user_78",
+  "request_date": "2025-10-02",
+  "requested_amount": 50200.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 50200.0,
+  "earliest_date_for_full_payment": "2025-10-02",
+  "safe_with_changes": 50200.0,
+  "earliest_with_changes": "2025-10-02",
+  "spending_candidates": [
+   "reduce_to:event_7225:1480",
+   "stop:event_7224"
+  ]
+ },
+ {
+  "request_id": "request_79",
+  "user_id": "user_79",
+  "request_date": "2024-09-04",
+  "requested_amount": 2151.6,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 856.13,
+  "earliest_date_for_full_payment": "2024-11-13",
+  "safe_with_changes": 900.13,
+  "earliest_with_changes": "2024-10-14",
+  "spending_candidates": [
+   "stop:event_7345",
+   "stop:event_7344"
+  ]
+ },
+ {
+  "request_id": "request_80",
+  "user_id": "user_80",
+  "request_date": "2025-02-06",
+  "requested_amount": 217500.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 125410.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 127755.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_7466",
+   "stop:event_7467"
+  ]
+ },
+ {
+  "request_id": "request_81",
+  "user_id": "user_81",
+  "request_date": "2026-07-03",
+  "requested_amount": 2076.0,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 2076.0,
+  "earliest_date_for_full_payment": "2026-07-03",
+  "safe_with_changes": 2076.0,
+  "earliest_with_changes": "2026-07-03",
+  "spending_candidates": [
+   "stop:event_7569"
+  ]
+ },
+ {
+  "request_id": "request_82",
+  "user_id": "user_82",
+  "request_date": "2024-12-05",
+  "requested_amount": 1405.2,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 341.08,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 341.08,
+  "earliest_with_changes": "",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_83",
+  "user_id": "user_83",
+  "request_date": "2025-05-07",
+  "requested_amount": 156200.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_7777",
+   "reduce_to:event_7776:545"
+  ]
+ },
+ {
+  "request_id": "request_84",
+  "user_id": "user_84",
+  "request_date": "2026-04-04",
+  "requested_amount": 95400.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 38708.45,
+  "earliest_date_for_full_payment": "2026-04-14",
+  "safe_with_changes": 41503.45,
+  "earliest_with_changes": "2026-04-14",
+  "spending_candidates": [
+   "reduce_to:event_7941:2260",
+   "stop:event_7857",
+   "stop:event_7856"
+  ]
+ },
+ {
+  "request_id": "request_85",
+  "user_id": "user_85",
+  "request_date": "2024-03-06",
+  "requested_amount": 19304000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 1257097.03,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 1699086.12,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_7976",
+   "reduce_to:event_7977:148200",
+   "stop:event_7975"
+  ]
+ },
+ {
+  "request_id": "request_86",
+  "user_id": "user_86",
+  "request_date": "2025-08-03",
+  "requested_amount": 46300.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 46300.0,
+  "earliest_date_for_full_payment": "2025-08-03",
+  "safe_with_changes": 46300.0,
+  "earliest_with_changes": "2025-08-03",
+  "spending_candidates": [
+   "reduce_to:event_8084:2360",
+   "stop:event_8083"
+  ]
+ },
+ {
+  "request_id": "request_87",
+  "user_id": "user_87",
+  "request_date": "2026-01-05",
+  "requested_amount": 487900.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_8162:4796"
+  ]
+ },
+ {
+  "request_id": "request_88",
+  "user_id": "user_88",
+  "request_date": "2024-06-07",
+  "requested_amount": 26092.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 11959.79,
+  "earliest_date_for_full_payment": "2024-06-14",
+  "safe_with_changes": 12235.89,
+  "earliest_with_changes": "2024-06-14",
+  "spending_candidates": [
+   "stop:event_8268"
+  ]
+ },
+ {
+  "request_id": "request_89",
+  "user_id": "user_89",
+  "request_date": "2025-11-04",
+  "requested_amount": 13756000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 10856737.56,
+  "earliest_date_for_full_payment": "2025-11-15",
+  "safe_with_changes": 11668339.18,
+  "earliest_with_changes": "2025-11-15",
+  "spending_candidates": [
+   "reduce_to:event_8337:266760",
+   "stop:event_8335",
+   "stop:event_8336"
+  ]
+ },
+ {
+  "request_id": "request_90",
+  "user_id": "user_90",
+  "request_date": "2026-07-06",
+  "requested_amount": 2560.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 2560.0,
+  "earliest_date_for_full_payment": "2026-07-06",
+  "safe_with_changes": 2560.0,
+  "earliest_with_changes": "2026-07-06",
+  "spending_candidates": [
+   "reduce_to:event_8439:235",
+   "reduce_to:event_8438:194",
+   "stop:event_8437"
+  ]
+ },
+ {
+  "request_id": "request_91",
+  "user_id": "user_91",
+  "request_date": "2024-09-03",
+  "requested_amount": 1927.2,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 723.64,
+  "earliest_date_for_full_payment": "2024-10-14",
+  "safe_with_changes": 808.55,
+  "earliest_with_changes": "2024-09-14",
+  "spending_candidates": [
+   "reduce_to:event_8511:43.20",
+   "stop:event_8510"
+  ]
+ },
+ {
+  "request_id": "request_92",
+  "user_id": "user_92",
+  "request_date": "2025-02-05",
+  "requested_amount": 34034.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 34034.0,
+  "earliest_date_for_full_payment": "2025-02-05",
+  "safe_with_changes": 34034.0,
+  "earliest_with_changes": "2025-02-05",
+  "spending_candidates": [
+   "reduce_to:event_8620:559",
+   "stop:event_8621"
+  ]
+ },
+ {
+  "request_id": "request_93",
+  "user_id": "user_93",
+  "request_date": "2026-04-07",
+  "requested_amount": 1729.2,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 1729.2,
+  "earliest_date_for_full_payment": "2026-04-07",
+  "safe_with_changes": 1729.2,
+  "earliest_with_changes": "2026-04-07",
+  "spending_candidates": [
+   "stop:event_8691",
+   "stop:event_8690"
+  ]
+ },
+ {
+  "request_id": "request_94",
+  "user_id": "user_94",
+  "request_date": "2024-12-04",
+  "requested_amount": 572.0,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 572.0,
+  "earliest_date_for_full_payment": "2024-12-04",
+  "safe_with_changes": 572.0,
+  "earliest_with_changes": "2024-12-04",
+  "spending_candidates": [
+   "stop:event_8765",
+   "stop:event_8764"
+  ]
+ },
+ {
+  "request_id": "request_95",
+  "user_id": "user_95",
+  "request_date": "2025-05-06",
+  "requested_amount": 553000.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 35779.27,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 41124.01,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_8843:3620"
+  ]
+ },
+ {
+  "request_id": "request_96",
+  "user_id": "user_96",
+  "request_date": "2026-01-03",
+  "requested_amount": 90200.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 81155.77,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 83480.77,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_8914"
+  ]
+ },
+ {
+  "request_id": "request_97",
+  "user_id": "user_97",
+  "request_date": "2024-03-05",
+  "requested_amount": 23496.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 2910.52,
+  "earliest_date_for_full_payment": "2024-04-17",
+  "safe_with_changes": 3129.42,
+  "earliest_with_changes": "2024-04-17",
+  "spending_candidates": [
+   "stop:event_9006"
+  ]
+ },
+ {
+  "request_id": "request_98",
+  "user_id": "user_98",
+  "request_date": "2025-08-07",
+  "requested_amount": 27148.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 13089.03,
+  "earliest_date_for_full_payment": "2025-08-14",
+  "safe_with_changes": 13965.73,
+  "earliest_with_changes": "2025-08-14",
+  "spending_candidates": [
+   "stop:event_9077",
+   "reduce_to:event_9079:620",
+   "stop:event_9076"
+  ]
+ },
+ {
+  "request_id": "request_99",
+  "user_id": "user_99",
+  "request_date": "2026-07-04",
+  "requested_amount": 18062.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 18062.0,
+  "earliest_date_for_full_payment": "2026-07-04",
+  "safe_with_changes": 18062.0,
+  "earliest_with_changes": "2026-07-04",
+  "spending_candidates": [
+   "stop:event_9188"
+  ]
+ },
+ {
+  "request_id": "request_100",
+  "user_id": "user_100",
+  "request_date": "2024-06-06",
+  "requested_amount": 37114.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 29490.98,
+  "earliest_date_for_full_payment": "2024-06-15",
+  "safe_with_changes": 30746.08,
+  "earliest_with_changes": "2024-06-15",
+  "spending_candidates": [
+   "stop:event_9267",
+   "stop:event_9268"
+  ]
+ },
+ {
+  "request_id": "request_101",
+  "user_id": "user_101",
+  "request_date": "2025-11-03",
+  "requested_amount": 143500.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 143500.0,
+  "earliest_date_for_full_payment": "2025-11-03",
+  "safe_with_changes": 143500.0,
+  "earliest_with_changes": "2025-11-03",
+  "spending_candidates": [
+   "reduce_to:event_9377:2660",
+   "stop:event_9378"
+  ]
+ },
+ {
+  "request_id": "request_102",
+  "user_id": "user_102",
+  "request_date": "2026-04-05",
+  "requested_amount": 1716.0,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 1716.0,
+  "earliest_date_for_full_payment": "2026-04-05",
+  "safe_with_changes": 1716.0,
+  "earliest_with_changes": "2026-04-05",
+  "spending_candidates": [
+   "reduce_to:event_9457:24.00",
+   "stop:event_9456",
+   "stop:event_9455"
+  ]
+ },
+ {
+  "request_id": "request_103",
+  "user_id": "user_103",
+  "request_date": "2024-09-07",
+  "requested_amount": 368300.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 21711.66,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 23781.66,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_9530:3110",
+   "reduce_to:event_9529:2070",
+   "stop:event_9528"
+  ]
+ },
+ {
+  "request_id": "request_104",
+  "user_id": "user_104",
+  "request_date": "2025-02-04",
+  "requested_amount": 17204.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 17204.0,
+  "earliest_date_for_full_payment": "2025-02-04",
+  "safe_with_changes": 17204.0,
+  "earliest_with_changes": "2025-02-04",
+  "spending_candidates": [
+   "stop:event_9639"
+  ]
+ },
+ {
+  "request_id": "request_105",
+  "user_id": "user_105",
+  "request_date": "2026-06-08",
+  "requested_amount": 53500.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 53500.0,
+  "earliest_date_for_full_payment": "2026-06-08",
+  "safe_with_changes": 53500.0,
+  "earliest_with_changes": "2026-06-08",
+  "spending_candidates": [
+   "reduce_to:event_9720:1632",
+   "reduce_to:event_9721:1720"
+  ]
+ },
+ {
+  "request_id": "request_106",
+  "user_id": "user_106",
+  "request_date": "2024-12-03",
+  "requested_amount": 2207.7,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 538.44,
+  "earliest_date_for_full_payment": "2025-01-16",
+  "safe_with_changes": 538.44,
+  "earliest_with_changes": "2025-01-16",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_107",
+  "user_id": "user_107",
+  "request_date": "2025-05-05",
+  "requested_amount": 2534.4,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_9895",
+   "stop:event_9894"
+  ]
+ },
+ {
+  "request_id": "request_108",
+  "user_id": "user_108",
+  "request_date": "2026-07-07",
+  "requested_amount": 55308.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 4690.55,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 5111.85,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_9994:421"
+  ]
+ },
+ {
+  "request_id": "request_109",
+  "user_id": "user_109",
+  "request_date": "2024-03-04",
+  "requested_amount": 1863.4,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 881.62,
+  "earliest_date_for_full_payment": "2024-03-15",
+  "safe_with_changes": 954.62,
+  "earliest_with_changes": "2024-03-15",
+  "spending_candidates": [
+   "stop:event_10081",
+   "stop:event_10080"
+  ]
+ },
+ {
+  "request_id": "request_110",
+  "user_id": "user_110",
+  "request_date": "2025-08-06",
+  "requested_amount": 22352.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 22352.0,
+  "earliest_date_for_full_payment": "2025-08-06",
+  "safe_with_changes": 22352.0,
+  "earliest_with_changes": "2025-08-06",
+  "spending_candidates": [
+   "stop:event_10198",
+   "reduce_to:event_10199:194",
+   "stop:event_10197"
+  ]
+ },
+ {
+  "request_id": "request_111",
+  "user_id": "user_111",
+  "request_date": "2026-04-03",
+  "requested_amount": 16625000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 16625000.0,
+  "earliest_date_for_full_payment": "2026-04-03",
+  "safe_with_changes": 16625000.0,
+  "earliest_with_changes": "2026-04-03",
+  "spending_candidates": [
+   "stop:event_10264"
+  ]
+ },
+ {
+  "request_id": "request_112",
+  "user_id": "user_112",
+  "request_date": "2024-06-05",
+  "requested_amount": 271.7,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_10333",
+   "stop:event_10334"
+  ]
+ },
+ {
+  "request_id": "request_113",
+  "user_id": "user_113",
+  "request_date": "2026-09-04",
+  "requested_amount": 36500.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 36500.0,
+  "earliest_date_for_full_payment": "2026-09-04",
+  "safe_with_changes": 36500.0,
+  "earliest_with_changes": "2026-09-04",
+  "spending_candidates": [
+   "reduce_to:event_10438:1565",
+   "reduce_to:event_10440:1490"
+  ]
+ },
+ {
+  "request_id": "request_114",
+  "user_id": "user_114",
+  "request_date": "2026-01-04",
+  "requested_amount": 65300.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 65300.0,
+  "earliest_date_for_full_payment": "2026-01-04",
+  "safe_with_changes": 65300.0,
+  "earliest_with_changes": "2026-01-04",
+  "spending_candidates": [
+   "stop:event_10559",
+   "reduce_to:event_10561:1890",
+   "stop:event_10558"
+  ]
+ },
+ {
+  "request_id": "request_115",
+  "user_id": "user_115",
+  "request_date": "2024-09-06",
+  "requested_amount": 80500.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 16371.71,
+  "earliest_date_for_full_payment": "2024-10-14",
+  "safe_with_changes": 16946.71,
+  "earliest_with_changes": "2024-10-14",
+  "spending_candidates": [
+   "stop:event_10665"
+  ]
+ },
+ {
+  "request_id": "request_116",
+  "user_id": "user_116",
+  "request_date": "2025-02-03",
+  "requested_amount": 241200.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 26598.79,
+  "earliest_date_for_full_payment": "2025-04-15",
+  "safe_with_changes": 27718.79,
+  "earliest_with_changes": "2025-04-15",
+  "spending_candidates": [
+   "stop:event_10734"
+  ]
+ },
+ {
+  "request_id": "request_117",
+  "user_id": "user_117",
+  "request_date": "2026-07-05",
+  "requested_amount": 880.0,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 880.0,
+  "earliest_date_for_full_payment": "2026-07-05",
+  "safe_with_changes": 880.0,
+  "earliest_with_changes": "2026-07-05",
+  "spending_candidates": [
+   "stop:event_10833"
+  ]
+ },
+ {
+  "request_id": "request_118",
+  "user_id": "user_118",
+  "request_date": "2024-12-07",
+  "requested_amount": 738.1,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 474.29,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 610.76,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_10914:14.00",
+   "stop:event_10912"
+  ]
+ },
+ {
+  "request_id": "request_119",
+  "user_id": "user_119",
+  "request_date": "2025-05-04",
+  "requested_amount": 203500.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_11016:2655"
+  ]
+ },
+ {
+  "request_id": "request_120",
+  "user_id": "user_120",
+  "request_date": "2026-04-06",
+  "requested_amount": 7714000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 7714000.0,
+  "earliest_date_for_full_payment": "2026-04-06",
+  "safe_with_changes": 7714000.0,
+  "earliest_with_changes": "2026-04-06",
+  "spending_candidates": [
+   "stop:event_11086"
+  ]
+ },
+ {
+  "request_id": "request_121",
+  "user_id": "user_121",
+  "request_date": "2024-03-03",
+  "requested_amount": 633.6,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 633.6,
+  "earliest_date_for_full_payment": "2024-03-03",
+  "safe_with_changes": 633.6,
+  "earliest_with_changes": "2024-03-03",
+  "spending_candidates": [
+   "stop:event_11163",
+   "reduce_to:event_11164:9.50",
+   "reduce_to:event_11165:8.00"
+  ]
+ },
+ {
+  "request_id": "request_122",
+  "user_id": "user_122",
+  "request_date": "2025-08-05",
+  "requested_amount": 20558000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 20558000.0,
+  "earliest_date_for_full_payment": "2025-08-05",
+  "safe_with_changes": 20558000.0,
+  "earliest_with_changes": "2025-08-05",
+  "spending_candidates": [
+   "stop:event_11268",
+   "stop:event_11267"
+  ]
+ },
+ {
+  "request_id": "request_123",
+  "user_id": "user_123",
+  "request_date": "2026-01-07",
+  "requested_amount": 4076000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 4076000.0,
+  "earliest_date_for_full_payment": "2026-01-07",
+  "safe_with_changes": 4076000.0,
+  "earliest_with_changes": "2026-01-07",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_124",
+  "user_id": "user_124",
+  "request_date": "2024-06-04",
+  "requested_amount": 3104.2,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 1476.92,
+  "earliest_date_for_full_payment": "2024-07-14",
+  "safe_with_changes": 1510.92,
+  "earliest_with_changes": "2024-07-14",
+  "spending_candidates": [
+   "stop:event_11448"
+  ]
+ },
+ {
+  "request_id": "request_125",
+  "user_id": "user_125",
+  "request_date": "2025-11-06",
+  "requested_amount": 6468.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 6468.0,
+  "earliest_date_for_full_payment": "2025-11-06",
+  "safe_with_changes": 6468.0,
+  "earliest_with_changes": "2025-11-06",
+  "spending_candidates": [
+   "stop:event_11519"
+  ]
+ },
+ {
+  "request_id": "request_126",
+  "user_id": "user_126",
+  "request_date": "2026-07-03",
+  "requested_amount": 159600.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 49232.37,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 59414.4,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_11638:1784",
+   "stop:event_11636"
+  ]
+ },
+ {
+  "request_id": "request_127",
+  "user_id": "user_127",
+  "request_date": "2024-09-05",
+  "requested_amount": 23980.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_11706",
+   "stop:event_11707"
+  ]
+ },
+ {
+  "request_id": "request_128",
+  "user_id": "user_128",
+  "request_date": "2025-02-07",
+  "requested_amount": 25168.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 25168.0,
+  "earliest_date_for_full_payment": "2025-02-07",
+  "safe_with_changes": 25168.0,
+  "earliest_with_changes": "2025-02-07",
+  "spending_candidates": [
+   "reduce_to:event_11812:1058",
+   "stop:event_11813"
+  ]
+ },
+ {
+  "request_id": "request_129",
+  "user_id": "user_129",
+  "request_date": "2026-04-04",
+  "requested_amount": 2668.8,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 146.56,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 176.56,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_11885",
+   "stop:event_11884"
+  ]
+ },
+ {
+  "request_id": "request_130",
+  "user_id": "user_130",
+  "request_date": "2024-12-06",
+  "requested_amount": 1978.8,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 657.54,
+  "earliest_date_for_full_payment": "2025-01-16",
+  "safe_with_changes": 717.54,
+  "earliest_with_changes": "2024-12-16",
+  "spending_candidates": [
+   "stop:event_11958",
+   "stop:event_11957"
+  ]
+ },
+ {
+  "request_id": "request_131",
+  "user_id": "user_131",
+  "request_date": "2025-05-03",
+  "requested_amount": 1855.2,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 1319.97,
+  "earliest_date_for_full_payment": "2025-05-23",
+  "safe_with_changes": 1353.26,
+  "earliest_with_changes": "2025-05-23",
+  "spending_candidates": [
+   "reduce_to:event_12065:21.20"
+  ]
+ },
+ {
+  "request_id": "request_132",
+  "user_id": "user_132",
+  "request_date": "2026-01-05",
+  "requested_amount": 379.86,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 379.86,
+  "earliest_date_for_full_payment": "2026-01-05",
+  "safe_with_changes": 379.86,
+  "earliest_with_changes": "2026-01-05",
+  "spending_candidates": [
+   "reduce_to:event_12142:26.00"
+  ]
+ },
+ {
+  "request_id": "request_133",
+  "user_id": "user_133",
+  "request_date": "2024-03-07",
+  "requested_amount": 15770000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 15770000.0,
+  "earliest_date_for_full_payment": "2024-03-07",
+  "safe_with_changes": 15770000.0,
+  "earliest_with_changes": "2024-03-07",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_134",
+  "user_id": "user_134",
+  "request_date": "2025-08-04",
+  "requested_amount": 21831000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 7210010.38,
+  "earliest_date_for_full_payment": "2025-09-13",
+  "safe_with_changes": 7694510.38,
+  "earliest_with_changes": "2025-09-13",
+  "spending_candidates": [
+   "stop:event_12314",
+   "stop:event_12315"
+  ]
+ },
+ {
+  "request_id": "request_135",
+  "user_id": "user_135",
+  "request_date": "2026-07-06",
+  "requested_amount": 304.8,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 304.8,
+  "earliest_date_for_full_payment": "2026-07-06",
+  "safe_with_changes": 304.8,
+  "earliest_with_changes": "2026-07-06",
+  "spending_candidates": [
+   "stop:event_12413"
+  ]
+ },
+ {
+  "request_id": "request_136",
+  "user_id": "user_136",
+  "request_date": "2024-06-03",
+  "requested_amount": 560.4,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 560.4,
+  "earliest_date_for_full_payment": "2024-06-03",
+  "safe_with_changes": 560.4,
+  "earliest_with_changes": "2024-06-03",
+  "spending_candidates": [
+   "reduce_to:event_12498:27.20"
+  ]
+ },
+ {
+  "request_id": "request_137",
+  "user_id": "user_137",
+  "request_date": "2025-11-05",
+  "requested_amount": 80100.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 35996.94,
+  "earliest_date_for_full_payment": "2025-12-14",
+  "safe_with_changes": 42250.3,
+  "earliest_with_changes": "2025-11-14",
+  "spending_candidates": [
+   "stop:event_12572",
+   "reduce_to:event_12574:2068"
+  ]
+ },
+ {
+  "request_id": "request_138",
+  "user_id": "user_138",
+  "request_date": "2026-04-07",
+  "requested_amount": 1256.94,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 1117.9,
+  "earliest_date_for_full_payment": "2026-04-14",
+  "safe_with_changes": 1209.9,
+  "earliest_with_changes": "2026-04-14",
+  "spending_candidates": [
+   "stop:event_12669",
+   "reduce_to:event_12708:45.20",
+   "stop:event_12668"
+  ]
+ },
+ {
+  "request_id": "request_139",
+  "user_id": "user_139",
+  "request_date": "2024-09-04",
+  "requested_amount": 2316.0,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 2014.67,
+  "earliest_date_for_full_payment": "2024-09-15",
+  "safe_with_changes": 2038.67,
+  "earliest_with_changes": "2024-09-15",
+  "spending_candidates": [
+   "stop:event_12741"
+  ]
+ },
+ {
+  "request_id": "request_140",
+  "user_id": "user_140",
+  "request_date": "2025-02-06",
+  "requested_amount": 62832.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_141",
+  "user_id": "user_141",
+  "request_date": "2026-01-03",
+  "requested_amount": 171600.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 31906.26,
+  "earliest_date_for_full_payment": "2026-03-15",
+  "safe_with_changes": 35611.26,
+  "earliest_with_changes": "2026-03-15",
+  "spending_candidates": [
+   "stop:event_12948",
+   "stop:event_12947"
+  ]
+ },
+ {
+  "request_id": "request_142",
+  "user_id": "user_142",
+  "request_date": "2024-12-05",
+  "requested_amount": 1263.6,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 1263.6,
+  "earliest_date_for_full_payment": "2024-12-05",
+  "safe_with_changes": 1263.6,
+  "earliest_with_changes": "2024-12-05",
+  "spending_candidates": [
+   "reduce_to:event_13068:27.60"
+  ]
+ },
+ {
+  "request_id": "request_143",
+  "user_id": "user_143",
+  "request_date": "2025-05-07",
+  "requested_amount": 12584.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 4455.58,
+  "earliest_date_for_full_payment": "2025-06-16",
+  "safe_with_changes": 4611.78,
+  "earliest_with_changes": "2025-06-16",
+  "spending_candidates": [
+   "stop:event_13140"
+  ]
+ },
+ {
+  "request_id": "request_144",
+  "user_id": "user_144",
+  "request_date": "2026-07-04",
+  "requested_amount": 233.34,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_13240",
+   "stop:event_13239"
+  ]
+ },
+ {
+  "request_id": "request_145",
+  "user_id": "user_145",
+  "request_date": "2024-03-06",
+  "requested_amount": 217400.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 34344.31,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 45609.31,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_13341:2920",
+   "stop:event_13342"
+  ]
+ },
+ {
+  "request_id": "request_146",
+  "user_id": "user_146",
+  "request_date": "2025-08-03",
+  "requested_amount": 449400.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 22860.85,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 23385.85,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_13450"
+  ]
+ },
+ {
+  "request_id": "request_147",
+  "user_id": "user_147",
+  "request_date": "2026-04-05",
+  "requested_amount": 1129.7,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_13522:29.20",
+   "stop:event_13521",
+   "stop:event_13520"
+  ]
+ },
+ {
+  "request_id": "request_148",
+  "user_id": "user_148",
+  "request_date": "2024-06-07",
+  "requested_amount": 22242.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 10456.18,
+  "earliest_date_for_full_payment": "2024-06-14",
+  "safe_with_changes": 12275.78,
+  "earliest_with_changes": "2024-06-14",
+  "spending_candidates": [
+   "stop:event_13593",
+   "reduce_to:event_13594:576",
+   "stop:event_13592"
+  ]
+ },
+ {
+  "request_id": "request_149",
+  "user_id": "user_149",
+  "request_date": "2025-11-04",
+  "requested_amount": 36652.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 27578.85,
+  "earliest_date_for_full_payment": "2025-11-15",
+  "safe_with_changes": 27945.15,
+  "earliest_with_changes": "2025-11-15",
+  "spending_candidates": [
+   "reduce_to:event_13747:1014",
+   "stop:event_13702"
+  ]
+ },
+ {
+  "request_id": "request_150",
+  "user_id": "user_150",
+  "request_date": "2026-01-06",
+  "requested_amount": 496.1,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 401.8,
+  "earliest_date_for_full_payment": "2026-01-14",
+  "safe_with_changes": 453.53,
+  "earliest_with_changes": "2026-01-14",
+  "spending_candidates": [
+   "stop:event_13786",
+   "reduce_to:event_13787:16.00",
+   "stop:event_13785"
+  ]
+ },
+ {
+  "request_id": "request_151",
+  "user_id": "user_151",
+  "request_date": "2024-09-03",
+  "requested_amount": 26999000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 26999000.0,
+  "earliest_date_for_full_payment": "2024-09-03",
+  "safe_with_changes": 26999000.0,
+  "earliest_with_changes": "2024-09-03",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_152",
+  "user_id": "user_152",
+  "request_date": "2025-02-05",
+  "requested_amount": 13882.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 13185.27,
+  "earliest_date_for_full_payment": "2025-02-14",
+  "safe_with_changes": 13463.57,
+  "earliest_with_changes": "2025-02-14",
+  "spending_candidates": [
+   "stop:event_13958",
+   "stop:event_13957"
+  ]
+ },
+ {
+  "request_id": "request_153",
+  "user_id": "user_153",
+  "request_date": "2026-07-07",
+  "requested_amount": 2830.8,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 258.6,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 306.6,
+  "earliest_with_changes": "2026-09-13",
+  "spending_candidates": [
+   "stop:event_14064",
+   "stop:event_14063"
+  ]
+ },
+ {
+  "request_id": "request_154",
+  "user_id": "user_154",
+  "request_date": "2024-12-04",
+  "requested_amount": 1625.8,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 1084.23,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 1195.71,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_14186:27.20"
+  ]
+ },
+ {
+  "request_id": "request_155",
+  "user_id": "user_155",
+  "request_date": "2025-05-06",
+  "requested_amount": 112500.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 66491.33,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 67376.33,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_14289"
+  ]
+ },
+ {
+  "request_id": "request_156",
+  "user_id": "user_156",
+  "request_date": "2026-04-03",
+  "requested_amount": 43076.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 10652.82,
+  "earliest_date_for_full_payment": "2026-05-14",
+  "safe_with_changes": 11055.42,
+  "earliest_with_changes": "2026-05-14",
+  "spending_candidates": [
+   "reduce_to:event_14398:397",
+   "reduce_to:event_14359:403"
+  ]
+ },
+ {
+  "request_id": "request_157",
+  "user_id": "user_157",
+  "request_date": "2024-03-05",
+  "requested_amount": 23503000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 7018567.15,
+  "earliest_date_for_full_payment": "2024-04-17",
+  "safe_with_changes": 7582027.17,
+  "earliest_with_changes": "2024-04-17",
+  "spending_candidates": [
+   "reduce_to:event_14433:368600",
+   "reduce_to:event_14434:197600"
+  ]
+ },
+ {
+  "request_id": "request_158",
+  "user_id": "user_158",
+  "request_date": "2025-08-07",
+  "requested_amount": 242600.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 242600.0,
+  "earliest_date_for_full_payment": "2025-08-07",
+  "safe_with_changes": 242600.0,
+  "earliest_with_changes": "2025-08-07",
+  "spending_candidates": [
+   "reduce_to:event_14534:3280"
+  ]
+ },
+ {
+  "request_id": "request_159",
+  "user_id": "user_159",
+  "request_date": "2026-01-04",
+  "requested_amount": 13398.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 13398.0,
+  "earliest_date_for_full_payment": "2026-01-04",
+  "safe_with_changes": 13398.0,
+  "earliest_with_changes": "2026-01-04",
+  "spending_candidates": [
+   "stop:event_14619"
+  ]
+ },
+ {
+  "request_id": "request_160",
+  "user_id": "user_160",
+  "request_date": "2024-06-06",
+  "requested_amount": 1246.3,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 643.61,
+  "earliest_date_for_full_payment": "2024-06-14",
+  "safe_with_changes": 643.61,
+  "earliest_with_changes": "2024-06-14",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_161",
+  "user_id": "user_161",
+  "request_date": "2025-11-03",
+  "requested_amount": 21204000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_14774",
+   "stop:event_14775"
+  ]
+ },
+ {
+  "request_id": "request_162",
+  "user_id": "user_162",
+  "request_date": "2026-07-05",
+  "requested_amount": 83923000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 4388137.84,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 5170937.84,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_14872"
+  ]
+ },
+ {
+  "request_id": "request_163",
+  "user_id": "user_163",
+  "request_date": "2024-09-07",
+  "requested_amount": 19304000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 10954661.43,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 11581661.43,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_14953"
+  ]
+ },
+ {
+  "request_id": "request_164",
+  "user_id": "user_164",
+  "request_date": "2025-02-04",
+  "requested_amount": 27018000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 27018000.0,
+  "earliest_date_for_full_payment": "2025-02-04",
+  "safe_with_changes": 27018000.0,
+  "earliest_with_changes": "2025-02-04",
+  "spending_candidates": [
+   "reduce_to:event_15063:415150",
+   "stop:event_15064"
+  ]
+ },
+ {
+  "request_id": "request_165",
+  "user_id": "user_165",
+  "request_date": "2026-04-06",
+  "requested_amount": 80600.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 80600.0,
+  "earliest_date_for_full_payment": "2026-04-06",
+  "safe_with_changes": 80600.0,
+  "earliest_with_changes": "2026-04-06",
+  "spending_candidates": [
+   "stop:event_15135",
+   "reduce_to:event_15136:1048",
+   "stop:event_15134"
+  ]
+ },
+ {
+  "request_id": "request_166",
+  "user_id": "user_166",
+  "request_date": "2024-12-03",
+  "requested_amount": 2907.6,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 2907.6,
+  "earliest_date_for_full_payment": "2024-12-03",
+  "safe_with_changes": 2907.6,
+  "earliest_with_changes": "2024-12-03",
+  "spending_candidates": [
+   "reduce_to:event_15209:45.20",
+   "reduce_to:event_15208:29.50"
+  ]
+ },
+ {
+  "request_id": "request_167",
+  "user_id": "user_167",
+  "request_date": "2025-05-05",
+  "requested_amount": 43802.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 43802.0,
+  "earliest_date_for_full_payment": "2025-05-05",
+  "safe_with_changes": 43802.0,
+  "earliest_with_changes": "2025-05-05",
+  "spending_candidates": [
+   "reduce_to:event_15286:913",
+   "stop:event_15285"
+  ]
+ },
+ {
+  "request_id": "request_168",
+  "user_id": "user_168",
+  "request_date": "2026-01-07",
+  "requested_amount": 49380.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 43454.63,
+  "earliest_date_for_full_payment": "2026-01-14",
+  "safe_with_changes": 49380.0,
+  "earliest_with_changes": "2026-01-07",
+  "spending_candidates": [
+   "reduce_to:event_15366:2728",
+   "reduce_to:event_15367:2475",
+   "stop:event_15364"
+  ]
+ },
+ {
+  "request_id": "request_169",
+  "user_id": "user_169",
+  "request_date": "2024-03-04",
+  "requested_amount": 41976.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 41976.0,
+  "earliest_date_for_full_payment": "2024-03-04",
+  "safe_with_changes": 41976.0,
+  "earliest_with_changes": "2024-03-04",
+  "spending_candidates": [
+   "stop:event_15488"
+  ]
+ },
+ {
+  "request_id": "request_170",
+  "user_id": "user_170",
+  "request_date": "2025-08-06",
+  "requested_amount": 36936000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 34275921.57,
+  "earliest_date_for_full_payment": "2025-08-14",
+  "safe_with_changes": 35159421.57,
+  "earliest_with_changes": "2025-08-14",
+  "spending_candidates": [
+   "stop:event_15605",
+   "stop:event_15604"
+  ]
+ },
+ {
+  "request_id": "request_171",
+  "user_id": "user_171",
+  "request_date": "2026-07-03",
+  "requested_amount": 1878.8,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 106.11,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 123.11,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_15701"
+  ]
+ },
+ {
+  "request_id": "request_172",
+  "user_id": "user_172",
+  "request_date": "2024-06-05",
+  "requested_amount": 10200.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 10200.0,
+  "earliest_date_for_full_payment": "2024-06-05",
+  "safe_with_changes": 10200.0,
+  "earliest_with_changes": "2024-06-05",
+  "spending_candidates": [
+   "reduce_to:event_15785:322",
+   "stop:event_15784"
+  ]
+ },
+ {
+  "request_id": "request_173",
+  "user_id": "user_173",
+  "request_date": "2025-11-07",
+  "requested_amount": 113000.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 74343.33,
+  "earliest_date_for_full_payment": "2025-11-14",
+  "safe_with_changes": 76491.59,
+  "earliest_with_changes": "2025-11-14",
+  "spending_candidates": [
+   "reduce_to:event_15864:1272"
+  ]
+ },
+ {
+  "request_id": "request_174",
+  "user_id": "user_174",
+  "request_date": "2026-04-04",
+  "requested_amount": 1146.2,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 1146.2,
+  "earliest_date_for_full_payment": "2026-04-04",
+  "safe_with_changes": 1146.2,
+  "earliest_with_changes": "2026-04-04",
+  "spending_candidates": [
+   "reduce_to:event_15976:16.80",
+   "stop:event_15975",
+   "stop:event_15974"
+  ]
+ },
+ {
+  "request_id": "request_175",
+  "user_id": "user_175",
+  "request_date": "2024-09-06",
+  "requested_amount": 2346.3,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 2346.3,
+  "earliest_date_for_full_payment": "2024-09-06",
+  "safe_with_changes": 2346.3,
+  "earliest_with_changes": "2024-09-06",
+  "spending_candidates": [
+   "reduce_to:event_16047:21.50",
+   "stop:event_16045"
+  ]
+ },
+ {
+  "request_id": "request_176",
+  "user_id": "user_176",
+  "request_date": "2025-02-03",
+  "requested_amount": 1239.7,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 458.92,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 477.24,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_16157:11.60"
+  ]
+ },
+ {
+  "request_id": "request_177",
+  "user_id": "user_177",
+  "request_date": "2026-01-05",
+  "requested_amount": 1017.6,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 1017.6,
+  "earliest_date_for_full_payment": "2026-01-05",
+  "safe_with_changes": 1017.6,
+  "earliest_with_changes": "2026-01-05",
+  "spending_candidates": [
+   "stop:event_16235",
+   "reduce_to:event_16236:34.40",
+   "reduce_to:event_16237:15.50"
+  ]
+ },
+ {
+  "request_id": "request_178",
+  "user_id": "user_178",
+  "request_date": "2024-12-07",
+  "requested_amount": 2938.1,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 2938.1,
+  "earliest_date_for_full_payment": "2024-12-07",
+  "safe_with_changes": 2938.1,
+  "earliest_with_changes": "2024-12-07",
+  "spending_candidates": [
+   "reduce_to:event_16352:46.40"
+  ]
+ },
+ {
+  "request_id": "request_179",
+  "user_id": "user_179",
+  "request_date": "2025-05-04",
+  "requested_amount": 41648000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 14385647.03,
+  "earliest_date_for_full_payment": "2025-06-16",
+  "safe_with_changes": 14385647.03,
+  "earliest_with_changes": "2025-06-16",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_180",
+  "user_id": "user_180",
+  "request_date": "2026-07-06",
+  "requested_amount": 66500.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_181",
+  "user_id": "user_181",
+  "request_date": "2024-03-03",
+  "requested_amount": 5059.2,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 550.26,
+  "earliest_date_for_full_payment": "2024-05-18",
+  "safe_with_changes": 620.26,
+  "earliest_with_changes": "2024-05-18",
+  "spending_candidates": [
+   "stop:event_16621",
+   "stop:event_16622"
+  ]
+ },
+ {
+  "request_id": "request_182",
+  "user_id": "user_182",
+  "request_date": "2025-08-05",
+  "requested_amount": 65714.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 65714.0,
+  "earliest_date_for_full_payment": "2025-08-05",
+  "safe_with_changes": 65714.0,
+  "earliest_with_changes": "2025-08-05",
+  "spending_candidates": [
+   "reduce_to:event_16733:1029",
+   "stop:event_16734"
+  ]
+ },
+ {
+  "request_id": "request_183",
+  "user_id": "user_183",
+  "request_date": "2026-04-07",
+  "requested_amount": 26866000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 25499437.33,
+  "earliest_date_for_full_payment": "2026-04-14",
+  "safe_with_changes": 26564596.35,
+  "earliest_with_changes": "2026-04-14",
+  "spending_candidates": [
+   "reduce_to:event_16815:365560",
+   "stop:event_16814",
+   "reduce_to:event_16816:342000"
+  ]
+ },
+ {
+  "request_id": "request_184",
+  "user_id": "user_184",
+  "request_date": "2024-06-04",
+  "requested_amount": 251900.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 21348.09,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 25438.09,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_16935",
+   "stop:event_16934"
+  ]
+ },
+ {
+  "request_id": "request_185",
+  "user_id": "user_185",
+  "request_date": "2025-11-06",
+  "requested_amount": 1257.3,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 583.02,
+  "earliest_date_for_full_payment": "2025-11-14",
+  "safe_with_changes": 620.02,
+  "earliest_with_changes": "2025-11-14",
+  "spending_candidates": [
+   "stop:event_17052",
+   "stop:event_17053"
+  ]
+ },
+ {
+  "request_id": "request_186",
+  "user_id": "user_186",
+  "request_date": "2026-01-03",
+  "requested_amount": 26554.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 17474.67,
+  "earliest_date_for_full_payment": "2026-01-14",
+  "safe_with_changes": 19386.22,
+  "earliest_with_changes": "2026-01-14",
+  "spending_candidates": [
+   "reduce_to:event_17160:660",
+   "stop:event_17159",
+   "stop:event_17158"
+  ]
+ },
+ {
+  "request_id": "request_187",
+  "user_id": "user_187",
+  "request_date": "2024-09-05",
+  "requested_amount": 187500.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 44872.87,
+  "earliest_date_for_full_payment": "2024-10-14",
+  "safe_with_changes": 46817.87,
+  "earliest_with_changes": "2024-10-14",
+  "spending_candidates": [
+   "stop:event_17265"
+  ]
+ },
+ {
+  "request_id": "request_188",
+  "user_id": "user_188",
+  "request_date": "2025-02-07",
+  "requested_amount": 2464.0,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 318.3,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 354.3,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_17332",
+   "stop:event_17331"
+  ]
+ },
+ {
+  "request_id": "request_189",
+  "user_id": "user_189",
+  "request_date": "2026-07-04",
+  "requested_amount": 488.4,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 488.4,
+  "earliest_date_for_full_payment": "2026-07-04",
+  "safe_with_changes": 488.4,
+  "earliest_with_changes": "2026-07-04",
+  "spending_candidates": [
+   "stop:event_17431"
+  ]
+ },
+ {
+  "request_id": "request_190",
+  "user_id": "user_190",
+  "request_date": "2024-12-06",
+  "requested_amount": 2557.5,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 880.43,
+  "earliest_date_for_full_payment": "2025-01-16",
+  "safe_with_changes": 880.43,
+  "earliest_with_changes": "2025-01-16",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_191",
+  "user_id": "user_191",
+  "request_date": "2025-05-03",
+  "requested_amount": 664.4,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 664.4,
+  "earliest_date_for_full_payment": "2025-05-03",
+  "safe_with_changes": 664.4,
+  "earliest_with_changes": "2025-05-03",
+  "spending_candidates": [
+   "stop:event_17620"
+  ]
+ },
+ {
+  "request_id": "request_192",
+  "user_id": "user_192",
+  "request_date": "2026-04-05",
+  "requested_amount": 2046.0,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 296.34,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 342.34,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_17696",
+   "stop:event_17695"
+  ]
+ },
+ {
+  "request_id": "request_193",
+  "user_id": "user_193",
+  "request_date": "2024-03-07",
+  "requested_amount": 1212.2,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 209.97,
+  "earliest_date_for_full_payment": "2024-03-17",
+  "safe_with_changes": 240.97,
+  "earliest_with_changes": "2024-03-17",
+  "spending_candidates": [
+   "stop:event_17768",
+   "stop:event_17767"
+  ]
+ },
+ {
+  "request_id": "request_194",
+  "user_id": "user_194",
+  "request_date": "2025-08-04",
+  "requested_amount": 132800.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 46031.94,
+  "earliest_date_for_full_payment": "2025-09-23",
+  "safe_with_changes": 50041.52,
+  "earliest_with_changes": "2025-09-23",
+  "spending_candidates": [
+   "reduce_to:event_17877:1796",
+   "stop:event_17876"
+  ]
+ },
+ {
+  "request_id": "request_195",
+  "user_id": "user_195",
+  "request_date": "2026-01-06",
+  "requested_amount": 1170.4,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 1094.34,
+  "earliest_date_for_full_payment": "2026-01-14",
+  "safe_with_changes": 1106.34,
+  "earliest_with_changes": "2026-01-14",
+  "spending_candidates": [
+   "reduce_to:event_17957:13.00",
+   "reduce_to:event_17955:12.00"
+  ]
+ },
+ {
+  "request_id": "request_196",
+  "user_id": "user_196",
+  "request_date": "2024-06-03",
+  "requested_amount": 762.3,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 762.3,
+  "earliest_date_for_full_payment": "2024-06-03",
+  "safe_with_changes": 762.3,
+  "earliest_with_changes": "2024-06-03",
+  "spending_candidates": [
+   "stop:event_18062"
+  ]
+ },
+ {
+  "request_id": "request_197",
+  "user_id": "user_197",
+  "request_date": "2025-11-05",
+  "requested_amount": 50939000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_18126",
+   "stop:event_18125"
+  ]
+ },
+ {
+  "request_id": "request_198",
+  "user_id": "user_198",
+  "request_date": "2026-07-07",
+  "requested_amount": 185800.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 185800.0,
+  "earliest_date_for_full_payment": "2026-07-07",
+  "safe_with_changes": 185800.0,
+  "earliest_with_changes": "2026-07-07",
+  "spending_candidates": [
+   "stop:event_18222"
+  ]
+ },
+ {
+  "request_id": "request_199",
+  "user_id": "user_199",
+  "request_date": "2024-09-04",
+  "requested_amount": 23674000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 23674000.0,
+  "earliest_date_for_full_payment": "2024-09-04",
+  "safe_with_changes": 23674000.0,
+  "earliest_with_changes": "2024-09-04",
+  "spending_candidates": [
+   "reduce_to:event_18319:753350",
+   "stop:event_18316"
+  ]
+ },
+ {
+  "request_id": "request_200",
+  "user_id": "user_200",
+  "request_date": "2025-02-06",
+  "requested_amount": 21717000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 21717000.0,
+  "earliest_date_for_full_payment": "2025-02-06",
+  "safe_with_changes": 21717000.0,
+  "earliest_with_changes": "2025-02-06",
+  "spending_candidates": [
+   "reduce_to:event_18422:394250",
+   "stop:event_18423"
+  ]
+ },
+ {
+  "request_id": "request_201",
+  "user_id": "user_201",
+  "request_date": "2026-04-03",
+  "requested_amount": 23997000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 23997000.0,
+  "earliest_date_for_full_payment": "2026-04-03",
+  "safe_with_changes": 23997000.0,
+  "earliest_with_changes": "2026-04-03",
+  "spending_candidates": [
+   "stop:event_18493",
+   "stop:event_18492"
+  ]
+ },
+ {
+  "request_id": "request_202",
+  "user_id": "user_202",
+  "request_date": "2024-12-05",
+  "requested_amount": 123900.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 123900.0,
+  "earliest_date_for_full_payment": "2024-12-05",
+  "safe_with_changes": 123900.0,
+  "earliest_with_changes": "2024-12-05",
+  "spending_candidates": [
+   "stop:event_18571"
+  ]
+ },
+ {
+  "request_id": "request_203",
+  "user_id": "user_203",
+  "request_date": "2025-05-07",
+  "requested_amount": 1442.1,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 1442.1,
+  "earliest_date_for_full_payment": "2025-05-07",
+  "safe_with_changes": 1442.1,
+  "earliest_with_changes": "2025-05-07",
+  "spending_candidates": [
+   "stop:event_18662",
+   "reduce_to:event_18663:35.00",
+   "stop:event_18660"
+  ]
+ },
+ {
+  "request_id": "request_204",
+  "user_id": "user_204",
+  "request_date": "2026-01-04",
+  "requested_amount": 588.74,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_18761"
+  ]
+ },
+ {
+  "request_id": "request_205",
+  "user_id": "user_205",
+  "request_date": "2024-03-06",
+  "requested_amount": 10621000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 10621000.0,
+  "earliest_date_for_full_payment": "2024-03-06",
+  "safe_with_changes": 10621000.0,
+  "earliest_with_changes": "2024-03-06",
+  "spending_candidates": [
+   "stop:event_18861",
+   "reduce_to:event_18863:236360",
+   "stop:event_18862"
+  ]
+ },
+ {
+  "request_id": "request_206",
+  "user_id": "user_206",
+  "request_date": "2025-08-03",
+  "requested_amount": 1404.7,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 1404.7,
+  "earliest_date_for_full_payment": "2025-08-03",
+  "safe_with_changes": 1404.7,
+  "earliest_with_changes": "2025-08-03",
+  "spending_candidates": [
+   "reduce_to:event_18965:19.50",
+   "stop:event_18964"
+  ]
+ },
+ {
+  "request_id": "request_207",
+  "user_id": "user_207",
+  "request_date": "2026-07-05",
+  "requested_amount": 11830.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 6737.41,
+  "earliest_date_for_full_payment": "2026-07-15",
+  "safe_with_changes": 7258.81,
+  "earliest_with_changes": "2026-07-15",
+  "spending_candidates": [
+   "stop:event_19033"
+  ]
+ },
+ {
+  "request_id": "request_208",
+  "user_id": "user_208",
+  "request_date": "2024-06-07",
+  "requested_amount": 4413000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 4413000.0,
+  "earliest_date_for_full_payment": "2024-06-07",
+  "safe_with_changes": 4413000.0,
+  "earliest_with_changes": "2024-06-07",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_209",
+  "user_id": "user_209",
+  "request_date": "2025-11-04",
+  "requested_amount": 56914.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 2887.09,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 3205.66,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_19222:242",
+   "stop:event_19223"
+  ]
+ },
+ {
+  "request_id": "request_210",
+  "user_id": "user_210",
+  "request_date": "2026-04-06",
+  "requested_amount": 1360.02,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 1105.92,
+  "earliest_date_for_full_payment": "2026-04-14",
+  "safe_with_changes": 1210.92,
+  "earliest_with_changes": "2026-04-14",
+  "spending_candidates": [
+   "stop:event_19294",
+   "stop:event_19293"
+  ]
+ },
+ {
+  "request_id": "request_211",
+  "user_id": "user_211",
+  "request_date": "2024-09-03",
+  "requested_amount": 1788.6,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 546.7,
+  "earliest_date_for_full_payment": "2024-10-14",
+  "safe_with_changes": 546.7,
+  "earliest_with_changes": "2024-10-14",
+  "spending_candidates": [
+   "reduce_to:event_19369:27.50"
+  ]
+ },
+ {
+  "request_id": "request_212",
+  "user_id": "user_212",
+  "request_date": "2025-02-05",
+  "requested_amount": 71934000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 10035793.79,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 11156804.94,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_19473:603440",
+   "stop:event_19472"
+  ]
+ },
+ {
+  "request_id": "request_213",
+  "user_id": "user_213",
+  "request_date": "2026-01-07",
+  "requested_amount": 3362.4,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 3362.4,
+  "earliest_date_for_full_payment": "2026-01-07",
+  "safe_with_changes": 3362.4,
+  "earliest_with_changes": "2026-01-07",
+  "spending_candidates": [
+   "reduce_to:event_19550:34.80",
+   "stop:event_19549",
+   "stop:event_19548"
+  ]
+ },
+ {
+  "request_id": "request_214",
+  "user_id": "user_214",
+  "request_date": "2024-12-04",
+  "requested_amount": 69750.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 69750.0,
+  "earliest_date_for_full_payment": "2024-12-04",
+  "safe_with_changes": 69750.0,
+  "earliest_with_changes": "2024-12-04",
+  "spending_candidates": [
+   "reduce_to:event_19671:4220",
+   "stop:event_19670"
+  ]
+ },
+ {
+  "request_id": "request_215",
+  "user_id": "user_215",
+  "request_date": "2025-05-06",
+  "requested_amount": 29986.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 29986.0,
+  "earliest_date_for_full_payment": "2025-05-06",
+  "safe_with_changes": 29986.0,
+  "earliest_with_changes": "2025-05-06",
+  "spending_candidates": [
+   "stop:event_19801",
+   "reduce_to:event_19803:391",
+   "reduce_to:event_19802:272"
+  ]
+ },
+ {
+  "request_id": "request_216",
+  "user_id": "user_216",
+  "request_date": "2026-07-03",
+  "requested_amount": 3332.4,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 699.29,
+  "earliest_date_for_full_payment": "2026-08-14",
+  "safe_with_changes": 752.29,
+  "earliest_with_changes": "2026-08-14",
+  "spending_candidates": [
+   "stop:event_19898"
+  ]
+ },
+ {
+  "request_id": "request_217",
+  "user_id": "user_217",
+  "request_date": "2024-03-05",
+  "requested_amount": 37180.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 23028.54,
+  "earliest_date_for_full_payment": "2024-03-15",
+  "safe_with_changes": 24790.31,
+  "earliest_with_changes": "2024-03-15",
+  "spending_candidates": [
+   "reduce_to:event_19979:561",
+   "stop:event_19977",
+   "stop:event_19978"
+  ]
+ },
+ {
+  "request_id": "request_218",
+  "user_id": "user_218",
+  "request_date": "2025-08-07",
+  "requested_amount": 61142000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 28753921.45,
+  "earliest_date_for_full_payment": "2025-08-15",
+  "safe_with_changes": 28753921.45,
+  "earliest_with_changes": "2025-08-15",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_219",
+  "user_id": "user_219",
+  "request_date": "2026-04-04",
+  "requested_amount": 1673.1,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_20157:26.50"
+  ]
+ },
+ {
+  "request_id": "request_220",
+  "user_id": "user_220",
+  "request_date": "2024-06-06",
+  "requested_amount": 3118.5,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 215.79,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 265.82,
+  "earliest_with_changes": "2024-08-13",
+  "spending_candidates": [
+   "stop:event_20228",
+   "reduce_to:event_20229:18.50"
+  ]
+ },
+ {
+  "request_id": "request_221",
+  "user_id": "user_221",
+  "request_date": "2025-11-03",
+  "requested_amount": 109800.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 109800.0,
+  "earliest_date_for_full_payment": "2025-11-03",
+  "safe_with_changes": 109800.0,
+  "earliest_with_changes": "2025-11-03",
+  "spending_candidates": [
+   "reduce_to:event_20337:1620",
+   "stop:event_20336"
+  ]
+ },
+ {
+  "request_id": "request_222",
+  "user_id": "user_222",
+  "request_date": "2026-01-05",
+  "requested_amount": 34078.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 34078.0,
+  "earliest_date_for_full_payment": "2026-01-05",
+  "safe_with_changes": 34078.0,
+  "earliest_with_changes": "2026-01-05",
+  "spending_candidates": [
+   "stop:event_20414"
+  ]
+ },
+ {
+  "request_id": "request_223",
+  "user_id": "user_223",
+  "request_date": "2024-09-07",
+  "requested_amount": 898.7,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 898.7,
+  "earliest_date_for_full_payment": "2024-09-07",
+  "safe_with_changes": 898.7,
+  "earliest_with_changes": "2024-09-07",
+  "spending_candidates": [
+   "stop:event_20478"
+  ]
+ },
+ {
+  "request_id": "request_224",
+  "user_id": "user_224",
+  "request_date": "2025-02-04",
+  "requested_amount": 10327000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 10327000.0,
+  "earliest_date_for_full_payment": "2025-02-04",
+  "safe_with_changes": 10327000.0,
+  "earliest_with_changes": "2025-02-04",
+  "spending_candidates": [
+   "stop:event_20547",
+   "stop:event_20546"
+  ]
+ },
+ {
+  "request_id": "request_225",
+  "user_id": "user_225",
+  "request_date": "2026-07-06",
+  "requested_amount": 22059000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 12021650.36,
+  "earliest_date_for_full_payment": "2026-07-15",
+  "safe_with_changes": 12437750.36,
+  "earliest_with_changes": "2026-07-15",
+  "spending_candidates": [
+   "reduce_to:event_20649:314450",
+   "stop:event_20650"
+  ]
+ },
+ {
+  "request_id": "request_226",
+  "user_id": "user_226",
+  "request_date": "2024-12-03",
+  "requested_amount": 157000.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 147804.83,
+  "earliest_date_for_full_payment": "2025-02-16",
+  "safe_with_changes": 157000.0,
+  "earliest_with_changes": "2024-12-03",
+  "spending_candidates": [
+   "reduce_to:event_20754:3552",
+   "reduce_to:event_20752:3700",
+   "stop:event_20753"
+  ]
+ },
+ {
+  "request_id": "request_227",
+  "user_id": "user_227",
+  "request_date": "2025-05-05",
+  "requested_amount": 259700.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 12595.85,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 12595.85,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_20859:1790"
+  ]
+ },
+ {
+  "request_id": "request_228",
+  "user_id": "user_228",
+  "request_date": "2026-04-07",
+  "requested_amount": 63327000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_20932",
+   "stop:event_20931"
+  ]
+ },
+ {
+  "request_id": "request_229",
+  "user_id": "user_229",
+  "request_date": "2024-03-04",
+  "requested_amount": 1526.8,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 547.14,
+  "earliest_date_for_full_payment": "2024-04-17",
+  "safe_with_changes": 573.14,
+  "earliest_with_changes": "2024-04-17",
+  "spending_candidates": [
+   "stop:event_21032",
+   "stop:event_21031"
+  ]
+ },
+ {
+  "request_id": "request_230",
+  "user_id": "user_230",
+  "request_date": "2025-08-06",
+  "requested_amount": 3537.6,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 755.3,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 830.3,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_21145"
+  ]
+ },
+ {
+  "request_id": "request_231",
+  "user_id": "user_231",
+  "request_date": "2026-01-03",
+  "requested_amount": 35706.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 35706.0,
+  "earliest_date_for_full_payment": "2026-01-03",
+  "safe_with_changes": 35706.0,
+  "earliest_with_changes": "2026-01-03",
+  "spending_candidates": [
+   "stop:event_21224",
+   "stop:event_21223"
+  ]
+ },
+ {
+  "request_id": "request_232",
+  "user_id": "user_232",
+  "request_date": "2024-06-05",
+  "requested_amount": 1970.1,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_21341"
+  ]
+ },
+ {
+  "request_id": "request_233",
+  "user_id": "user_233",
+  "request_date": "2025-11-07",
+  "requested_amount": 6241000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_21439",
+   "stop:event_21438"
+  ]
+ },
+ {
+  "request_id": "request_234",
+  "user_id": "user_234",
+  "request_date": "2026-07-04",
+  "requested_amount": 1213.3,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 273.01,
+  "earliest_date_for_full_payment": "2026-08-14",
+  "safe_with_changes": 292.01,
+  "earliest_with_changes": "2026-08-14",
+  "spending_candidates": [
+   "stop:event_21536"
+  ]
+ },
+ {
+  "request_id": "request_235",
+  "user_id": "user_235",
+  "request_date": "2024-09-06",
+  "requested_amount": 967.2,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 967.2,
+  "earliest_date_for_full_payment": "2024-09-06",
+  "safe_with_changes": 967.2,
+  "earliest_with_changes": "2024-09-06",
+  "spending_candidates": [
+   "stop:event_21620",
+   "reduce_to:event_21621:16.00",
+   "reduce_to:event_21622:9.00"
+  ]
+ },
+ {
+  "request_id": "request_236",
+  "user_id": "user_236",
+  "request_date": "2025-02-03",
+  "requested_amount": 52383000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 6842131.84,
+  "earliest_date_for_full_payment": "2025-04-15",
+  "safe_with_changes": 6938081.84,
+  "earliest_with_changes": "2025-04-15",
+  "spending_candidates": [
+   "stop:event_21742"
+  ]
+ },
+ {
+  "request_id": "request_237",
+  "user_id": "user_237",
+  "request_date": "2026-04-05",
+  "requested_amount": 23826000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 23826000.0,
+  "earliest_date_for_full_payment": "2026-04-05",
+  "safe_with_changes": 23826000.0,
+  "earliest_with_changes": "2026-04-05",
+  "spending_candidates": [
+   "reduce_to:event_21813:548720",
+   "reduce_to:event_21812:382850"
+  ]
+ },
+ {
+  "request_id": "request_238",
+  "user_id": "user_238",
+  "request_date": "2024-12-07",
+  "requested_amount": 663.6,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 174.4,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 285.4,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_21888",
+   "stop:event_21887"
+  ]
+ },
+ {
+  "request_id": "request_239",
+  "user_id": "user_239",
+  "request_date": "2025-05-04",
+  "requested_amount": 642.0,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 381.68,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 424.7,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_21992:9.20"
+  ]
+ },
+ {
+  "request_id": "request_240",
+  "user_id": "user_240",
+  "request_date": "2026-01-06",
+  "requested_amount": 101200.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_22063",
+   "stop:event_22062"
+  ]
+ },
+ {
+  "request_id": "request_241",
+  "user_id": "user_241",
+  "request_date": "2024-03-03",
+  "requested_amount": 21052000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 21052000.0,
+  "earliest_date_for_full_payment": "2024-03-03",
+  "safe_with_changes": 21052000.0,
+  "earliest_with_changes": "2024-03-03",
+  "spending_candidates": [
+   "stop:event_22154"
+  ]
+ },
+ {
+  "request_id": "request_242",
+  "user_id": "user_242",
+  "request_date": "2025-08-05",
+  "requested_amount": 1966.8,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_22218",
+   "stop:event_22217"
+  ]
+ },
+ {
+  "request_id": "request_243",
+  "user_id": "user_243",
+  "request_date": "2026-07-07",
+  "requested_amount": 17468.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 17468.0,
+  "earliest_date_for_full_payment": "2026-07-07",
+  "safe_with_changes": 17468.0,
+  "earliest_with_changes": "2026-07-07",
+  "spending_candidates": [
+   "stop:event_22314"
+  ]
+ },
+ {
+  "request_id": "request_244",
+  "user_id": "user_244",
+  "request_date": "2024-06-04",
+  "requested_amount": 49918.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 44946.14,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 46549.94,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_22395"
+  ]
+ },
+ {
+  "request_id": "request_245",
+  "user_id": "user_245",
+  "request_date": "2025-11-06",
+  "requested_amount": 128500.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 46929.02,
+  "earliest_date_for_full_payment": "2025-12-14",
+  "safe_with_changes": 46929.02,
+  "earliest_with_changes": "2025-12-14",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_246",
+  "user_id": "user_246",
+  "request_date": "2026-04-03",
+  "requested_amount": 64086.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 64086.0,
+  "earliest_date_for_full_payment": "2026-04-03",
+  "safe_with_changes": 64086.0,
+  "earliest_with_changes": "2026-04-03",
+  "spending_candidates": [
+   "reduce_to:event_22614:927",
+   "reduce_to:event_22613:609"
+  ]
+ },
+ {
+  "request_id": "request_247",
+  "user_id": "user_247",
+  "request_date": "2024-09-05",
+  "requested_amount": 1059.3,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 1059.3,
+  "earliest_date_for_full_payment": "2024-09-05",
+  "safe_with_changes": 1059.3,
+  "earliest_with_changes": "2024-09-05",
+  "spending_candidates": [
+   "stop:event_22685",
+   "stop:event_22683"
+  ]
+ },
+ {
+  "request_id": "request_248",
+  "user_id": "user_248",
+  "request_date": "2025-02-07",
+  "requested_amount": 1965.6,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 1020.83,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 1057.73,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_22795:15.20",
+   "stop:event_22794"
+  ]
+ },
+ {
+  "request_id": "request_249",
+  "user_id": "user_249",
+  "request_date": "2026-01-04",
+  "requested_amount": 643.2,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_22874",
+   "stop:event_22873"
+  ]
+ },
+ {
+  "request_id": "request_250",
+  "user_id": "user_250",
+  "request_date": "2024-12-06",
+  "requested_amount": 124278.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 17404.9,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 17765.7,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_22981"
+  ]
+ },
+ {
+  "request_id": "request_251",
+  "user_id": "user_251",
+  "request_date": "2025-05-03",
+  "requested_amount": 1513.6,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 1455.34,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 1513.6,
+  "earliest_with_changes": "2025-05-03",
+  "spending_candidates": [
+   "stop:event_23062",
+   "stop:event_23061"
+  ]
+ },
+ {
+  "request_id": "request_252",
+  "user_id": "user_252",
+  "request_date": "2026-07-05",
+  "requested_amount": 28082000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 5655701.89,
+  "earliest_date_for_full_payment": "2026-08-14",
+  "safe_with_changes": 6028101.89,
+  "earliest_with_changes": "2026-08-14",
+  "spending_candidates": [
+   "stop:event_23156"
+  ]
+ },
+ {
+  "request_id": "request_253",
+  "user_id": "user_253",
+  "request_date": "2024-03-07",
+  "requested_amount": 2840.2,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 1627.16,
+  "earliest_date_for_full_payment": "2024-03-17",
+  "safe_with_changes": 1643.16,
+  "earliest_with_changes": "2024-03-17",
+  "spending_candidates": [
+   "stop:event_23237"
+  ]
+ },
+ {
+  "request_id": "request_254",
+  "user_id": "user_254",
+  "request_date": "2025-08-04",
+  "requested_amount": 3535.2,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 1051.25,
+  "earliest_date_for_full_payment": "2025-09-13",
+  "safe_with_changes": 1072.25,
+  "earliest_with_changes": "2025-09-13",
+  "spending_candidates": [
+   "reduce_to:event_23347:53.00",
+   "stop:event_23348"
+  ]
+ },
+ {
+  "request_id": "request_255",
+  "user_id": "user_255",
+  "request_date": "2026-04-06",
+  "requested_amount": 3345000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 3345000.0,
+  "earliest_date_for_full_payment": "2026-04-06",
+  "safe_with_changes": 3345000.0,
+  "earliest_with_changes": "2026-04-06",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_256",
+  "user_id": "user_256",
+  "request_date": "2024-06-03",
+  "requested_amount": 218700.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_23486"
+  ]
+ },
+ {
+  "request_id": "request_257",
+  "user_id": "user_257",
+  "request_date": "2025-11-05",
+  "requested_amount": 1352.4,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 644.17,
+  "earliest_date_for_full_payment": "2025-11-15",
+  "safe_with_changes": 717.68,
+  "earliest_with_changes": "2025-11-15",
+  "spending_candidates": [
+   "reduce_to:event_23593:39.00",
+   "reduce_to:event_23591:24.00",
+   "stop:event_23590"
+  ]
+ },
+ {
+  "request_id": "request_258",
+  "user_id": "user_258",
+  "request_date": "2026-01-07",
+  "requested_amount": 1113.6,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 1113.6,
+  "earliest_date_for_full_payment": "2026-01-07",
+  "safe_with_changes": 1113.6,
+  "earliest_with_changes": "2026-01-07",
+  "spending_candidates": [
+   "stop:event_23715"
+  ]
+ },
+ {
+  "request_id": "request_259",
+  "user_id": "user_259",
+  "request_date": "2024-09-04",
+  "requested_amount": 935.0,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 482.9,
+  "earliest_date_for_full_payment": "2024-10-14",
+  "safe_with_changes": 489.9,
+  "earliest_with_changes": "2024-10-14",
+  "spending_candidates": [
+   "stop:event_23823"
+  ]
+ },
+ {
+  "request_id": "request_260",
+  "user_id": "user_260",
+  "request_date": "2025-02-06",
+  "requested_amount": 52079000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 10788991.75,
+  "earliest_date_for_full_payment": "2025-04-15",
+  "safe_with_changes": 11842510.0,
+  "earliest_with_changes": "2025-04-15",
+  "spending_candidates": [
+   "reduce_to:event_23895:478040",
+   "reduce_to:event_23896:325850"
+  ]
+ },
+ {
+  "request_id": "request_261",
+  "user_id": "user_261",
+  "request_date": "2026-07-03",
+  "requested_amount": 1830.4,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 1830.4,
+  "earliest_date_for_full_payment": "2026-07-03",
+  "safe_with_changes": 1830.4,
+  "earliest_with_changes": "2026-07-03",
+  "spending_candidates": [
+   "stop:event_24010"
+  ]
+ },
+ {
+  "request_id": "request_262",
+  "user_id": "user_262",
+  "request_date": "2024-12-05",
+  "requested_amount": 9236000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_24096:548720",
+   "reduce_to:event_24094:541500",
+   "stop:event_24095"
+  ]
+ },
+ {
+  "request_id": "request_263",
+  "user_id": "user_263",
+  "request_date": "2025-05-07",
+  "requested_amount": 51546.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 9268.29,
+  "earliest_date_for_full_payment": "2025-07-17",
+  "safe_with_changes": 10934.34,
+  "earliest_with_changes": "2025-07-17",
+  "spending_candidates": [
+   "stop:event_24200",
+   "reduce_to:event_24201:506",
+   "stop:event_24199"
+  ]
+ },
+ {
+  "request_id": "request_264",
+  "user_id": "user_264",
+  "request_date": "2026-04-04",
+  "requested_amount": 111300.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 26863.74,
+  "earliest_date_for_full_payment": "2026-05-14",
+  "safe_with_changes": 31829.34,
+  "earliest_with_changes": "2026-05-14",
+  "spending_candidates": [
+   "reduce_to:event_24313:1504",
+   "stop:event_24312"
+  ]
+ },
+ {
+  "request_id": "request_265",
+  "user_id": "user_265",
+  "request_date": "2024-03-06",
+  "requested_amount": 45970.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 45970.0,
+  "earliest_date_for_full_payment": "2024-03-06",
+  "safe_with_changes": 45970.0,
+  "earliest_with_changes": "2024-03-06",
+  "spending_candidates": [
+   "stop:event_24385",
+   "stop:event_24384",
+   "stop:event_24383"
+  ]
+ },
+ {
+  "request_id": "request_266",
+  "user_id": "user_266",
+  "request_date": "2025-08-03",
+  "requested_amount": 935.0,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 935.0,
+  "earliest_date_for_full_payment": "2025-08-03",
+  "safe_with_changes": 935.0,
+  "earliest_with_changes": "2025-08-03",
+  "spending_candidates": []
+ },
+ {
+  "request_id": "request_267",
+  "user_id": "user_267",
+  "request_date": "2026-01-05",
+  "requested_amount": 1925.0,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 1844.04,
+  "earliest_date_for_full_payment": "2026-01-14",
+  "safe_with_changes": 1896.04,
+  "earliest_with_changes": "2026-01-14",
+  "spending_candidates": [
+   "stop:event_24573"
+  ]
+ },
+ {
+  "request_id": "request_268",
+  "user_id": "user_268",
+  "request_date": "2024-06-07",
+  "requested_amount": 2426.6,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 1134.52,
+  "earliest_date_for_full_payment": "2024-07-14",
+  "safe_with_changes": 1148.52,
+  "earliest_with_changes": "2024-07-14",
+  "spending_candidates": [
+   "stop:event_24680"
+  ]
+ },
+ {
+  "request_id": "request_269",
+  "user_id": "user_269",
+  "request_date": "2025-11-04",
+  "requested_amount": 15490.0,
+  "home_currency": "ZAR",
+  "amount_safe_to_pay": 0.0,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 0.0,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "stop:event_24744"
+  ]
+ },
+ {
+  "request_id": "request_270",
+  "user_id": "user_270",
+  "request_date": "2026-07-06",
+  "requested_amount": 3028.8,
+  "home_currency": "USD",
+  "amount_safe_to_pay": 126.35,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 195.35,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_24845:23.00"
+  ]
+ },
+ {
+  "request_id": "request_271",
+  "user_id": "user_271",
+  "request_date": "2024-09-03",
+  "requested_amount": 91300.0,
+  "home_currency": "INR",
+  "amount_safe_to_pay": 9952.3,
+  "earliest_date_for_full_payment": "",
+  "safe_with_changes": 25345.75,
+  "earliest_with_changes": "",
+  "spending_candidates": [
+   "reduce_to:event_24927:1616",
+   "stop:event_24925",
+   "stop:event_24926"
+  ]
+ },
+ {
+  "request_id": "request_272",
+  "user_id": "user_272",
+  "request_date": "2025-02-05",
+  "requested_amount": 13585000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 6676962.13,
+  "earliest_date_for_full_payment": "2025-02-14",
+  "safe_with_changes": 6961923.52,
+  "earliest_with_changes": "2025-02-14",
+  "spending_candidates": [
+   "reduce_to:event_25030:216600",
+   "stop:event_25031"
+  ]
+ },
+ {
+  "request_id": "request_273",
+  "user_id": "user_273",
+  "request_date": "2026-04-07",
+  "requested_amount": 15861000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 10743745.89,
+  "earliest_date_for_full_payment": "2026-04-14",
+  "safe_with_changes": 11887545.89,
+  "earliest_with_changes": "2026-04-14",
+  "spending_candidates": [
+   "stop:event_25103",
+   "stop:event_25102"
+  ]
+ },
+ {
+  "request_id": "request_274",
+  "user_id": "user_274",
+  "request_date": "2024-12-04",
+  "requested_amount": 2713.7,
+  "home_currency": "EUR",
+  "amount_safe_to_pay": 2578.63,
+  "earliest_date_for_full_payment": "2024-12-16",
+  "safe_with_changes": 2713.7,
+  "earliest_with_changes": "2024-12-04",
+  "spending_candidates": [
+   "reduce_to:event_25181:51.60",
+   "stop:event_25180",
+   "stop:event_25179"
+  ]
+ },
+ {
+  "request_id": "request_275",
+  "user_id": "user_275",
+  "request_date": "2025-05-06",
+  "requested_amount": 15884000.0,
+  "home_currency": "IDR",
+  "amount_safe_to_pay": 15884000.0,
+  "earliest_date_for_full_payment": "2025-05-06",
+  "safe_with_changes": 15884000.0,
+  "earliest_with_changes": "2025-05-06",
+  "spending_candidates": [
+   "reduce_to:event_25301:376200",
+   "stop:event_25300"
+  ]
+ }
+]
