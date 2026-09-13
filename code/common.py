@@ -6,12 +6,37 @@ Dataset is READ-ONLY; state/ and evaluation/ are generated at runtime.
 from __future__ import annotations
 
 import csv
+import os
 from datetime import date, datetime
 from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
 
 CODE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = CODE_DIR.parent
+
+
+def _load_dotenv() -> None:
+    """Load repo-root (or code/) `.env` into os.environ without overriding.
+
+    Stdlib-only: KEY=VALUE lines, '#' comments, optional quotes. Lets
+    `python3 code/main.py` pick up GROQ_KEY_1/GROQ_KEY_2 with no manual export.
+    """
+    for path in (REPO_ROOT / ".env", CODE_DIR / ".env"):
+        try:
+            text = path.read_text(encoding="utf-8")
+        except OSError:
+            continue
+        for line in text.splitlines():
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            key, value = key.strip(), value.strip().strip("'\"").strip()
+            if key and key not in os.environ:
+                os.environ[key] = value
+
+
+_load_dotenv()
 DATASET = REPO_ROOT / "dataset"
 STATE_DIR = CODE_DIR / "state"
 EVAL_DIR = REPO_ROOT / "evaluation"

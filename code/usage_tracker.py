@@ -22,6 +22,10 @@ except ImportError:  # pragma: no cover - direct script use
 LEGACY_LOG = STATE_DIR.parent / ".usage_log.jsonl"
 
 PRICE_PER_1K = {
+    # Groq Llama 4 Scout (official): $0.11/1M in, $0.34/1M out.
+    "meta-llama/llama-4-scout-17b-16e-instruct": (0.00011, 0.00034),
+    # gpt-5.6-luna via Experiential gateway catalog: $0.20/1M in, $1.20/1M out.
+    "gpt-5.6-luna": (0.0002, 0.0012),
     "gpt-4o": (0.005, 0.015),
     "gpt-4o-mini": (0.00015, 0.0006),
     "claude-3-5-sonnet": (0.003, 0.015),

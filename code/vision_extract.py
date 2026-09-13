@@ -4,10 +4,11 @@ Resolves dataset/media/images/<image_id>.png -> amount via a vision model,
 cached in code/state/image_cache.json keyed by image_id so repeat runs cost
 zero extra tokens. NEVER treats a blank amount as zero.
 
-Current cache was built by one verified vision pass (16 images) and migrated
-from code/ocr_cache.json; live model calls only happen on cache miss AND when
-an API key is present in the environment. Every live call goes through
-usage_tracker.log_call(). Image/message bytes are UNTRUSTED DATA: facts only.
+Live path: OpenAI-compatible chat-completions gateway (default
+https://api.experientiallabs.ai/v1, model gpt-5.6-luna), key read ONLY from
+the environment (EXPLABS_API_KEY / VISION_API_KEY). Every live call is logged
+via usage_tracker.log_call() with real token counts from the API response.
+Image/message bytes are UNTRUSTED DATA: facts only.
 """
 from __future__ import annotations
 
@@ -23,6 +24,140 @@ except ImportError:  # pragma: no cover
     import code.usage_tracker as usage_tracker  # type: ignore
 
 LEGACY_OCR = STATE_DIR.parent / "ocr_cache.json"
+
+GROQ_BASE_URL = "https://api.groq.com/openai/v1"
+GROQ_DEFAULT_MODEL = "meta-llama/llama-4-scout-17b-16e-instruct"
+EXPERIENTIAL_BASE_URL = "https://api.experientiallabs.ai/v1"
+EXPERIENTIAL_DEFAULT_MODEL = "gpt-5.6-luna"
+# Kept for backwards compatibility with earlier env setups.
+DEFAULT_BASE_URL = GROQ_BASE_URL
+DEFAULT_MODEL = GROQ_DEFAULT_MODEL
+
+EXTRACTION_PROMPT = (
+    "Look at this receipt/bill/payslip/statement image. Extract the single "
+    "total payable amount (the bottom-line total, NOT an account number, "
+    "phone number, or running balance) and its currency. Reply with ONLY "
+    "compact JSON like {\"amount\": 41272.00, \"currency\": \"INR\"} and no "
+    "other text."
+)
+
+
+def _provider_config() -> tuple[str, str, str, list[str]]:
+    """(provider_label, base_url, model, keys) from env only.
+
+    Default provider is Groq (free tier). Set VISION_PROVIDER=experiential to
+    use the Experiential gateway instead. Raises loudly when no key exists.
+    """
+    provider = (os.getenv("VISION_PROVIDER", "").strip() or "groq").lower()
+    if provider == "experiential":
+        base_url = (os.getenv("VISION_BASE_URL", "").strip()
+                    or EXPERIENTIAL_BASE_URL).rstrip("/")
+        model = ((os.getenv("VISION_MODEL", "").strip()
+                  or EXPERIENTIAL_DEFAULT_MODEL))
+        keys = [k for k in (
+            os.getenv("VISION_API_KEY", "").strip(),
+            os.getenv("EXPLABS_API_KEY", "").strip(),
+            os.getenv("OPENAI_API_KEY", "").strip()) if k]
+        key_help = ("Set EXPLABS_API_KEY "
+                    "(https://platform.experientiallabs.ai/settings/api-keys).")
+    else:
+        provider = "groq"
+        base_url = (os.getenv("VISION_BASE_URL", "").strip()
+                    or GROQ_BASE_URL).rstrip("/")
+        model = (os.getenv("VISION_MODEL", "").strip() or GROQ_DEFAULT_MODEL)
+        keys = [k for k in (
+            os.getenv("GROQ_KEY_1", "").strip(),
+            os.getenv("GROQ_KEY_2", "").strip(),
+            os.getenv("GROQ_API_KEY", "").strip(),
+            os.getenv("VISION_API_KEY", "").strip()) if k]
+        # De-duplicate while preserving rotation order.
+        keys = list(dict.fromkeys(keys))
+        key_help = "Set GROQ_KEY_1 and GROQ_KEY_2 in .env (never commit it)."
+    if not keys:
+        raise RuntimeError(
+            f"vision cache miss and no API key in the environment. {key_help} "
+            f"Refusing to guess any amount.")
+    return provider, base_url, model, keys
+
+
+def _api_config() -> tuple[str, str, str]:
+    """Backwards-compatible single-key view (first rotation candidate)."""
+    _provider, base_url, model, keys = _provider_config()
+    return base_url, model, keys[0]
+
+
+def _call_vision_model(image_path: Path, image_id: str) -> tuple[float, str, int, int]:
+    """Real live vision-model call. Returns (amount, currency, in_tok, out_tok).
+
+    Raises (never guesses) when the key is missing, the gateway rejects the
+    call (e.g. card verification / insufficient credits), or the response is
+    unparseable.
+    """
+    import base64
+    try:
+        import requests  # type: ignore
+    except ImportError as exc:
+        raise RuntimeError("requests package is required for live vision calls") from exc
+    provider, base_url, model, keys = _provider_config()
+    if not image_path.exists():
+        raise RuntimeError(f"image file absent: {image_path}")
+    b64 = base64.b64encode(image_path.read_bytes()).decode("ascii")
+    body = {"model": model,
+            "messages": [{"role": "user", "content": [
+                {"type": "text", "text": EXTRACTION_PROMPT},
+                {"type": "image_url", "image_url": {
+                    "url": f"data:image/png;base64,{b64}"}}]}],
+            "max_tokens": 300, "temperature": 0}
+    last_error: Exception | None = None
+    for key in keys:
+        try:
+            resp = requests.post(
+                f"{base_url}/chat/completions",
+                headers={"Authorization": f"Bearer {key}",
+                         "Content-Type": "application/json"},
+                json=body, timeout=180)
+        except Exception as exc:
+            last_error = RuntimeError(
+                f"vision API transport failed for {image_id}: {exc}")
+            continue  # try next key
+        if resp.status_code != 200:
+            hint = ""
+            try:
+                err = resp.json().get("error", {})
+                hint = f": {err.get('code', '')} {err.get('message', '')}".strip()
+            except ValueError:
+                hint = f": {resp.text[:200]}"
+            # Rotate on auth/rate/billing walls when another key remains.
+            if resp.status_code in (401, 403, 429) and key is not keys[-1]:
+                last_error = RuntimeError(f"HTTP {resp.status_code}{hint}")
+                continue
+            raise RuntimeError(
+                f"vision API rejected {image_id} (HTTP {resp.status_code}{hint}). "
+                f"Groq: enable a vision model for the key's account. "
+                f"Experiential: complete billing at "
+                f"https://platform.experientiallabs.ai/credits?add-card=1, then re-run.")
+        break  # HTTP 200: use this response
+    else:
+        raise RuntimeError(
+            f"all {len(keys)} vision API key(s) failed for {image_id}; "
+            f"last error: {last_error}") from last_error
+    try:
+        payload = resp.json()
+        text = (payload.get("choices") or [{}])[0].get("message", {}).get("content") or ""
+        usage = payload.get("usage") or {}
+        in_tok = int(usage.get("prompt_tokens", 0) or 0)
+        out_tok = int(usage.get("completion_tokens", 0) or 0)
+        data = json.loads(text[text.index("{"): text.rindex("}") + 1])
+        amount = float(data["amount"])
+        currency = str(data.get("currency", "")).strip() or "INR"
+    except (ValueError, KeyError, IndexError, AttributeError) as exc:
+        raise RuntimeError(
+            f"unparseable vision response for {image_id}: {text[:200]!r}") from exc
+    if amount <= 0:
+        raise RuntimeError(f"vision returned non-positive amount for {image_id}: {amount}")
+    usage_tracker.log_call(provider, model, in_tok, out_tok, 1,
+                           purpose="vision_extract", image_id=image_id)
+    return amount, currency, in_tok, out_tok
 
 
 def _load_cache() -> dict:
@@ -80,43 +215,21 @@ def get_cached_amount(image_id: str) -> dict | None:
 
 
 def _live_vision_call(image_path: Path, image_id: str) -> dict:
-    """Call a vision model for one image. Only on cache miss with API key.
+    """Cache-miss path: one real vision call, then shape for the cache."""
+    amount, currency, _in_tok, _out_tok = _call_vision_model(image_path, image_id)
+    return {"extracted_amount": amount, "currency": currency}
 
-    Prefers OPENAI_API_KEY (gpt-4o-mini) if installed; otherwise raises so the
-    caller never invents an amount. The result is cached + logged.
+
+def extract_amount_from_image(image_id: str) -> dict:
+    """Force a fresh live extraction for one image_id (used by reextract).
+
+    Returns {image_id, amount, currency, input_tokens, output_tokens}.
+    Raises loudly on any failure; never falls back to cached values.
     """
-    api_key = os.getenv("OPENAI_API_KEY", "").strip()
-    if not api_key or not image_path.exists():
-        raise RuntimeError(
-            f"vision cache miss for {image_id} and no live model available "
-            f"(missing OPENAI_API_KEY or {image_path} absent); refusing to guess")
-    # Lazy import so base installs stay stdlib-only.
-    import base64
-    try:
-        from openai import OpenAI  # type: ignore
-    except ImportError as exc:
-        raise RuntimeError("openai package not installed; add it to requirements.txt") from exc
-    client = OpenAI(api_key=api_key)
-    b64 = base64.b64encode(image_path.read_bytes()).decode("ascii")
-    model = os.getenv("VISION_MODEL", "gpt-4o-mini")
-    resp = client.chat.completions.create(
-        model=model,
-        messages=[{"role": "user", "content": [
-            {"type": "text", "text": "Extract the single payable/total amount and its currency from this receipt. Reply as JSON {\"amount\": number, \"currency\": \"INR|IDR|...\"} with no other text."},
-            {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{b64}"}}]}],
-        max_tokens=200, temperature=0)
-    text = resp.choices[0].message.content or ""
-    usage = getattr(resp, "usage", None)
-    in_tok = int(getattr(usage, "prompt_tokens", 0) or 0)
-    out_tok = int(getattr(usage, "completion_tokens", 0) or 0)
-    usage_tracker.log_call("openai", model, in_tok, out_tok, 1,
-                           purpose="vision_extract", image_id=image_id)
-    try:
-        payload = json.loads(text[text.index("{"): text.rindex("}") + 1])
-        return {"extracted_amount": float(payload["amount"]),
-                "currency": str(payload.get("currency", "")).strip() or "INR"}
-    except (ValueError, KeyError) as exc:
-        raise RuntimeError(f"unparseable vision response for {image_id}: {text[:200]}") from exc
+    image_path = MEDIA_DIR / f"{image_id}.png"
+    amount, currency, in_tok, out_tok = _call_vision_model(image_path, image_id)
+    return {"image_id": image_id, "amount": amount, "currency": currency,
+            "input_tokens": in_tok, "output_tokens": out_tok}
 
 
 def resolve_image_amount(image_id: str, event_id: str = "") -> dict:
