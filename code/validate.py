@@ -114,14 +114,21 @@ def validate(output_path: str) -> list:
         if status == "affordable_now" and earliest != req_date:
             errors.append(f"{rid}: affordable_now requires earliest == request_date")
         # NOTE: earliest_date_for_full_payment measures financial capacity
-        # independently of payment preferences (spec). A not_affordable row
-        # (no *eligible* method completes the request, e.g. user rejects
-        # full_payment) may still carry a capacity date; it is empty only
-        # when full payment never passes the safety check in-window.
+        # independently of payment preferences (spec: it may equal request_date
+        # even when the recommendation is installments). A not_affordable row
+        # (no *eligible* method completes the request, e.g. user_79/user_133
+        # accept only partial_payment while the request disallows it or the
+        # deadline passes first) may still carry a capacity date; it is empty
+        # only when full payment never passes the safety check in-window
+        # (verified: all 7 sample not_affordable rows are truly-never-safe,
+        # so samples show empty; preference-blocked eval rows keep the date).
+        # safe == requested with not_affordable is therefore NOT a boundary
+        # bug (e.g. request_133: full safe 2024-03-07 but user rejects
+        # full_payment and allows_partial=false).
         if earliest:
             if _d(earliest) is None:
                 errors.append(f"{rid}: bad earliest date {earliest!r}")
-            elif status != "not_affordable":
+            else:
                 delta = (_d(earliest) - _d(req_date)).days
                 if not (0 <= delta <= 90):
                     errors.append(f"{rid}: earliest {earliest} outside 90d window")

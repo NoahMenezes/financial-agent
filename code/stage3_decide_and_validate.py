@@ -101,7 +101,8 @@ def decide_all() -> list[dict]:
 def write_output(rows: list[dict], out_path: Path | None = None) -> Path:
     out = out_path or OUTPUT_CSV
     with open(out, "w", encoding="utf-8", newline="") as fh:
-        w = csv.DictWriter(fh, fieldnames=validator.EXPECTED_COLS)
+        w = csv.DictWriter(fh, fieldnames=validator.EXPECTED_COLS,
+                           lineterminator="\n")
         w.writeheader()
         w.writerows(rows)
     return out

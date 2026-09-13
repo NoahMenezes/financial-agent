@@ -29,8 +29,10 @@ code/.venv/bin/python code/main.py
 code/.venv/bin/python code/stage1_state_builder.py
 code/.venv/bin/python code/stage2_forecast.py
 code/.venv/bin/python code/stage3_decide_and_validate.py
-# tests (must run from code/):
-cd code && ../code/.venv/bin/python -m unittest discover -s tests -v && cd ..
+# tests (venv exists):
+(cd code && ./.venv/bin/python -m unittest discover -s tests -v)
+# tests (no venv / system python):
+(cd code && python3 -m unittest discover -s tests -v)
 ```
 
 This reads `dataset/` (read-only), writes `code/state/*.json` intermediates,
