@@ -67,7 +67,7 @@ class TestVisionCall(unittest.TestCase):
     def test_success_logs_provider_model_tokens(self):
         os.environ["GROQ_KEY_1"] = "test-key"
         fake_requests = type("R", (), {})()
-        fake_requests.post = lambda **k: _Resp(200, _ok_payload())
+        fake_requests.post = lambda *a, **k: _Resp(200, _ok_payload())
         logged = []
         with patch.dict(sys.modules, {"requests": fake_requests}):
             with patch.object(vision_extract.usage_tracker, "log_call",
@@ -98,7 +98,7 @@ class TestVisionCall(unittest.TestCase):
     def test_all_keys_failed_raises(self):
         os.environ["GROQ_KEY_1"] = "key-one"
         fake_requests = type("R", (), {})()
-        fake_requests.post = lambda **k: _Resp(
+        fake_requests.post = lambda *a, **k: _Resp(
             404, {"error": {"code": "model_not_found", "message": "no access"}})
         with patch.dict(sys.modules, {"requests": fake_requests}):
             with self.assertRaises(RuntimeError) as cm:
@@ -108,7 +108,7 @@ class TestVisionCall(unittest.TestCase):
     def test_unparseable_raises(self):
         os.environ["GROQ_KEY_1"] = "test-key"
         fake_requests = type("R", (), {})()
-        fake_requests.post = lambda **k: _Resp(
+        fake_requests.post = lambda *a, **k: _Resp(
             200, _ok_payload(content="no json here"))
         with patch.dict(sys.modules, {"requests": fake_requests}):
             with self.assertRaises(RuntimeError):

@@ -1,8 +1,9 @@
 # Buy or Wait? -- code README
 
 Deterministic AI financial agent. One pipeline, three internal stages.
-No network calls in the default run. Secrets (if ever needed) come from
-environment variables only (`OPENAI_API_KEY`, `VISION_MODEL`).
+No network calls in the default run. Secrets come from environment variables
+only (repo-root `.env`, gitignored, auto-loaded): `GROQ_KEY_1`/`GROQ_KEY_2`
+for live vision, `VISION_MODEL` to override the default vision model.
 
 ## Setup (everything lives inside `code/`)
 
@@ -14,10 +15,25 @@ pip install --upgrade pip
 pip install -r code/requirements.txt
 ```
 
-Base run needs only stdlib; `rapidocr/openai/pillow/numpy` are for optional
-live vision on cache miss. The 16 blank-amount receipts are already cached so
-the default run costs zero tokens. `code/.venv/` is gitignored and excluded
-from `code.zip`.
+Base run needs only stdlib + `requests`; `rapidocr/pillow/numpy` are for the
+optional local OCR cross-check. The 16 blank-amount receipts are already
+cached so the default run costs zero tokens. `code/.venv/` is gitignored and
+excluded from `code.zip`.
+
+## Live vision re-extraction (one-time, needs a vision-capable key)
+
+```bash
+# keys live in repo-root .env (GROQ_KEY_1, GROQ_KEY_2); auto-loaded, never committed
+python3 code/reextract_images.py  # 16 live calls, stops hard on any mismatch
+python3 code/verify_images.py     # RapidOCR cross-check of the new amounts
+python3 code/main.py              # regenerates output.csv + usage_report.md + code.zip
+```
+
+Status: both Groq keys authenticate and run text inference (verified), but
+the accounts expose no vision-capable model (scout returns `model_not_found`)
+and the Experiential fallback needs card verification — so the live run is
+wired, rotation-tested, and blocked only on account provisioning, with the
+verified cache untouched until it succeeds.
 
 ## Run (from repo root, using the `code/.venv`)
 
@@ -64,6 +80,8 @@ evaluation/                     SIBLING of code/ (required zip layout)
 Data flow: `main` calls `stage1.build_states()` → `stage2.run_forecast()` →
 `stage3.run()`, connected through `code/state/*.json` files.
 
+Full module inventory, endpoint contracts, and decision rules:
+[`code/ARCHITECTURE.md`](./ARCHITECTURE.md).
 See `code/DATASET_COVERAGE.md` for the per-dataset audit (what is implemented
 vs intentionally left out per the guidelines).
 

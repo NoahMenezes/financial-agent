@@ -117,7 +117,10 @@ def build_code_zip(zip_name: str = "code.zip") -> Path:
                     ".pytest_cache", "build", "dist", "evaluation", "state"}
     # state/*.json are runtime-generated; ship image_cache only via migration source.
     # Keep ocr_cache.json (curated input) but NOT generated state/ JSONs or previews.
-    exclude_files = {".env", "code.zip", "agent2_results.json", "agent2_preview.csv",
+    # Legacy modules superseded by the staged pipeline (never imported by it)
+    # are also excluded so the submission package contains only live code.
+    exclude_files = {".env", "code.zip", "agent2_cli.py", "agent2_results.json",
+                     "agent2_preview.csv", "package.py", "llm_tracker.py",
                      "validation_report.txt", ".usage_log.jsonl"}
     exclude_ext = {".pyc", ".pyo"}
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as zf:

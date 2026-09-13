@@ -58,6 +58,16 @@ cannot leak future info into eval forecasts.
   tokens); results persist in `image_cache.json::_ocr_check` and are cited in
   `evaluation/usage_report.md`. `usage_log.json == []` on a green run is
   correct: zero *live* model calls happened (cache hits only).
+- **Live vision path is wired (Groq default, key rotation, loud failures).**
+  `vision_extract._call_vision_model` calls an OpenAI-compatible gateway
+  (default Groq `meta-llama/llama-4-scout-17b-16e-instruct`, override via
+  `VISION_MODEL`), rotating `GROQ_KEY_1` → `GROQ_KEY_2` on auth/rate walls;
+  `code/reextract_images.py` forces 16 fresh calls with mismatch-stop and
+  rewrites the cache with `llm_vision_api` provenance. Status: both Groq keys
+  verified working for text inference, but neither account currently exposes a
+  vision-capable model (`model_not_found`), and the Experiential fallback
+  needs card verification — so the cache keeps its verified values until the
+  live run succeeds (it refuses to guess or silently overwrite).
 - **Ranking rule 1 > rule 2 is unit-tested** (`tests/test_ranking.py`):
   a completing plan with changes beats a non-completing plan without changes.
 

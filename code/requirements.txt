@@ -1,4 +1,4 @@
 rapidocr_onnxruntime>=1.2.0
 pillow>=10.0.0
 numpy>=1.26
-openai>=1.0.0  # optional: only for cache-miss vision calls in vision_extract.py
+requests>=2.0  # live vision calls in vision_extract.py (Groq/OpenAI-compatible)
