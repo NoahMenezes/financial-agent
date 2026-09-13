@@ -53,13 +53,19 @@ code/
   stage3_decide_and_validate.py Stage 3 -> output.csv, validation, code.zip
   state_builder.py              tested engine reused by Stage 1 (FX, OCR, firewall, dedup)
   forecast/                     tested engine reused by Stage 2 (calendar/safety/solver/spending/income)
-  decide.py / validate.py       engines reused by Stage 3 (ranking, checks)
+  forecast/income.py          monthly salary per earner stream (calendar paydays) + payroll overrides
+  decide.py / validate.py     engines reused by Stage 3 (ranking, checks)
+  eval_samples.py             diagnostic self-score on the 25 solved samples (not eval)
+  verify_images.py            one-time RapidOCR cross-check of the 16 cached amounts
   state/                        generated at runtime, NOT hand-edited
 evaluation/                     SIBLING of code/ (required zip layout)
 ```
 
 Data flow: `main` calls `stage1.build_states()` → `stage2.run_forecast()` →
 `stage3.run()`, connected through `code/state/*.json` files.
+
+See `code/DATASET_COVERAGE.md` for the per-dataset audit (what is implemented
+vs intentionally left out per the guidelines).
 
 ## Key rules implemented
 

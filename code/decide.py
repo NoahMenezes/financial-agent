@@ -3,8 +3,8 @@
 Consumes Agent 1 states (state_builder) + Agent 2 ForecastResult
 (forecast package) and implements PART A exactly:
   * eligibility gates per payment method,
-  * Option 1 installment duration: months_needed =
-    ceil(((last - first).days + 1) / 30) <= max_installment_months,
+  * LOCKED installment duration: whole months between the matched option's
+    first and last payment dates (common.months_span) <= max_installment_months,
   * 6-step ranking, status mapping, spending-change and plan formats,
   * grounded plain-language explanations.
 
@@ -19,6 +19,15 @@ from datetime import date, timedelta
 from decimal import Decimal
 
 from forecast.safety import is_safe_with_payments
+
+
+def rank_key(c):
+    """6-step ranking (LOCKED order). Rule 1 (completes by deadline) beats
+    rule 2 (no spending changes): a completing plan with changes sorts before
+    a non-completing plan without changes. Exported for unit tests."""
+    return (0 if c["completes"] else 1,
+            0 if not c["changes"] else 1,
+            c["total"], c["start"], c["n"], c["option_id"] or "~")
 
 
 def _d(s):
@@ -175,10 +184,6 @@ def decide_request(agent1_state: dict, request: dict, fr, options: list) -> dict
                            "start": earliest, "n": 1, "changes": [],
                            "completes": earliest <= desired})
 
-    def rank_key(c):
-        return (0 if c["completes"] else 1,
-                0 if not c["changes"] else 1,
-                c["total"], c["start"], c["n"], c["option_id"] or "~")
     candidates.sort(key=rank_key)
     winner = candidates[0] if candidates else None
 

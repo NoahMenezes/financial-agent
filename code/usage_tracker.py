@@ -110,7 +110,9 @@ def build_usage_report() -> Path:
         from code.common import IMAGE_CACHE_JSON  # type: ignore
     try:
         with open(IMAGE_CACHE_JSON, encoding="utf-8") as fh:
-            meta = json.load(fh).get("_tokens", {})
+            cache = json.load(fh)
+            meta = cache.get("_tokens", {})
+            ocr_check = cache.get("_ocr_check", {})
         if meta:
             records = list(records) + [{
                 "provider": meta.get("provider", "none"),
@@ -121,7 +123,7 @@ def build_usage_report() -> Path:
                 "estimated_cost_usd": 0.0,
             }]
     except (OSError, ValueError):
-        pass
+        ocr_check = {}
     n = n_requests()
     per_model: dict = defaultdict(lambda: {"calls": 0, "in": 0, "out": 0, "cost": 0.0, "provider": ""})
     for r in records:
@@ -137,6 +139,13 @@ def build_usage_report() -> Path:
     tot_cost = sum(v["cost"] for v in per_model.values())
     tot_tokens = tot_in + tot_out
     EVAL_DIR.mkdir(parents=True, exist_ok=True)
+    if ocr_check.get("checked") and ocr_check.get("matched") == ocr_check.get("checked"):
+        ocr_note = (f"* Machine provenance: all {ocr_check['matched']}/{ocr_check['checked']} cached amounts "
+                    f"verified present in local RapidOCR text ({ocr_check.get('engine', 'local OCR')}); "
+                    "see image_cache.json `_ocr_check`. Re-run code/verify_images.py to re-verify.")
+    else:
+        ocr_note = ("* Machine provenance: run code/verify_images.py to cross-check cached "
+                    "amounts against local RapidOCR text.")
     lines = ["# Token Usage Report -- final full-dataset run", "",
              f"Requests evaluated: {n}", "", "## Per-model totals", "",
              "| Provider | Model | Calls | Input tokens | Output tokens | Total tokens | Est. cost (USD) |",
@@ -157,6 +166,7 @@ def build_usage_report() -> Path:
               "* Blank-amount receipts were extracted once via vision review and",
               "  cached in code/state/image_cache.json (zero billed tokens on repeats);",
               "  full-dataset runs reuse the cache deterministically with 0 repeat calls.",
+              ocr_note,
               "* Forecasting/decision math is local and deterministic.",
               "* No API keys or credentials are included in this report.", ""]
     USAGE_REPORT_MD.write_text("\n".join(lines), encoding="utf-8")

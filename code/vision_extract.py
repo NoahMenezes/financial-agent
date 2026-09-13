@@ -135,7 +135,11 @@ def resolve_image_amount(image_id: str, event_id: str = "") -> dict:
 
 
 def ensure_cache_for_events(blank_event_ids: set[str] | None = None) -> dict:
-    """Ensure every blank-amount event's image is cached. Returns full cache."""
+    """Ensure every blank-amount event's image is cached. Returns full cache.
+
+    Always re-persists the normalized cache so its mtime reflects the latest
+    run even on 100% cache hits (content-identical, zero extra tokens).
+    """
     cache = migrate_legacy_cache()
     if not blank_event_ids:
         # Discover from images index: every related_event_id needs coverage.
@@ -144,13 +148,17 @@ def ensure_cache_for_events(blank_event_ids: set[str] | None = None) -> dict:
             iid = (row.get("image_id") or "").strip()
             if rel and iid and iid not in cache:
                 resolve_image_amount(iid, rel)
-        return _load_cache()
+        cache = _load_cache()
+        _save_cache(cache)
+        return cache
     idx = {r.get("related_event_id"): r.get("image_id") for r in load_images_index()}
     for eid in sorted(blank_event_ids):
         iid = idx.get(eid)
         if iid and iid not in cache:
             resolve_image_amount(iid, eid)
-    return _load_cache()
+    cache = _load_cache()
+    _save_cache(cache)
+    return cache
 
 
 def to_ocr_compat() -> dict:

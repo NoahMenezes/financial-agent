@@ -6,16 +6,23 @@ monthly salary. Without that, 208/250 eval users show no future income and
 the forecast collapses to ~0 safe (verified vs sample_requests).
 
 This module restores the missing piece, deterministically:
-  - settled `income/salary` credits with monthly cadence (median gap 25-35d,
-    >=3 points) are projected forward on the same cadence;
-  - base amount = LAST settled salary (reflects cuts immediately);
+  - settled `income/salary` credits are grouped by description signature
+    (one group per earner/payroll stream: "Primary household salary" and
+    "Second household income" are DIFFERENT streams; lumping them poisons
+    cadence detection with 5-day interleaved gaps). The lumped history is
+    tried first (unchanged behavior for today's projecting users); only when
+    it fails cadence, each live description-group is tried on its own.
+    Groups whose last pay is >60 days older than the newest settled salary
+    are dead streams (e.g. a previous employer) and are never projected.
+  - monthly cadence = >=3 points with median gap 25-35d;
+  - base amount = LAST settled salary of that stream (reflects cuts);
+  - paydays are projected on the same CALENDAR day-of-month (month-end
+    clamped), not last_date + fixed timedelta (which drifts: Dec 15 + 30d =
+    Jan 14, but payroll lands on the 15th);
   - employer payroll messages sent on/before request_date may override the
-    amount (explicit amendment wins, e.g. raise 33.345M -> 42.75M) and/or the
-    next pay date (e.g. moved to the 23rd). INSTRUCTION-class texts are
-    quarantined and never obeyed; only FACT payroll notes with plausible
-    amounts (within [0.3x, 3x] of last salary, filters date fragments/refs)
-    are considered. Future-dated messages (sent_at > request_date) are
-    ignored (no leak).
+    amount (explicit amendment wins) and/or the next pay date. INSTRUCTION
+    texts quarantined; only FACT notes with plausible amounts ([0.3x, 3x] of
+    last salary) count. Future-dated messages ignored (no leak).
   - one-offs (bonus/arrears/invoice/payout/windfall) are NEVER projected.
 
 Merged with Agent 1 scheduled rows downstream with +/-5d dedupe
@@ -24,11 +31,11 @@ Merged with Agent 1 scheduled rows downstream with +/-5d dedupe
 
 from __future__ import annotations
 
+import calendar as _calendar
+import re
 from datetime import date, timedelta
 from decimal import Decimal
 from statistics import median
-
-import re
 
 from .calendar import parse_date, to_decimal
 
@@ -53,18 +60,26 @@ STOP_SIGNALS = (
 )
 
 
-def _settled_salary_history(
+def _norm_desc(s: str) -> str:
+    return re.sub(r"\s+", " ", (s or "").strip().lower())
+
+
+def _collect_salary_rows(
     all_events: list[dict],
     user_id: str,
     home: str,
     fx_idx: dict,
     ocr: dict,
-) -> list[tuple[date, Decimal]]:
+) -> tuple[list[tuple[date, Decimal, str]], date | None]:
+    """All settled base-pay salary credits with normalized description.
+
+    Returns ([(settle, amount_home, norm_desc)], final_pay_date).
+    """
     # Local import to avoid cycle at module load; state_builder is Agent 1 code
     # reused read-only (FX + firewall helpers).
     from state_builder import _f, _parse_date, fx_convert
 
-    rows: list[tuple[date, Decimal]] = []
+    rows: list[tuple[date, Decimal, str]] = []
     final_pay_date: date | None = None
     for ev in all_events:
         if ev.get("user_id") != user_id:
@@ -90,11 +105,23 @@ def _settled_salary_history(
             continue
         prov: dict = {}
         val, _ = fx_convert(raw, ev_cur, home, settle, fx_idx, prov)
-        rows.append((settle, to_decimal(val)))
+        rows.append((settle, to_decimal(val), _norm_desc(ev.get("description", ""))))
         if FINAL_PAY.search(ev.get("description", "")):
             final_pay_date = settle if final_pay_date is None else max(final_pay_date, settle)
     rows.sort()
     return rows, final_pay_date
+
+
+def _settled_salary_history(
+    all_events: list[dict],
+    user_id: str,
+    home: str,
+    fx_idx: dict,
+    ocr: dict,
+) -> list[tuple[date, Decimal]]:
+    rows, final = _collect_salary_rows(all_events, user_id, home, fx_idx, ocr)
+    out = [(d, a) for d, a, _ in rows]
+    return out, final
 
 
 def detect_monthly_salary(
@@ -108,7 +135,16 @@ def detect_monthly_salary(
     if not (25 <= med_gap <= 35):
         return None
     last_date, last_amt = history[-1]
-    return {"interval": med_gap, "last_date": last_date, "last_amount": last_amt}
+    return {"interval": med_gap, "pay_day": last_date.day,
+            "last_date": last_date, "last_amount": last_amt}
+
+
+def _add_months(d: date, n: int) -> date:
+    """Calendar-month step anchored to the payroll day-of-month (clamped)."""
+    m = d.month - 1 + n
+    y = d.year + m // 12
+    m = m % 12 + 1
+    return date(y, m, min(d.day, _calendar.monthrange(y, m)[1]))
 
 
 def _plausible_salary_candidates(amounts: list[float], last: Decimal) -> list[Decimal]:
@@ -210,6 +246,64 @@ def income_stopped_by_message(messages: list[dict], user_id: str, request_date: 
     return False
 
 
+def _detect_streams(
+    all_events: list[dict],
+    user_id: str,
+    home: str,
+    fx_idx: dict,
+    ocr: dict,
+) -> list[dict]:
+    """Monthly salary streams for one user (usually exactly one).
+
+    Tries the lumped history first (identical to previous behavior). Only
+    when lumping fails cadence (e.g. two earners interleaved at 5/25-day
+    gaps), each live description-group is tried alone; dead groups (last pay
+    >60 days older than the newest settled salary) are excluded.
+    """
+    rows, _final = _collect_salary_rows(all_events, user_id, home, fx_idx, ocr)
+    if not rows:
+        return []
+    lumped = [(d, a) for d, a, _ in rows]
+    det = detect_monthly_salary(lumped)
+    if det is not None:
+        return [det]
+    newest = max(d for d, _, _ in rows)
+    streams: list[dict] = []
+    by_desc: dict[str, list[tuple[date, Decimal]]] = {}
+    for d, a, g in rows:
+        by_desc.setdefault(g, []).append((d, a))
+    for g in sorted(by_desc):
+        hist = sorted(by_desc[g])
+        if (newest - hist[-1][0]).days > 60:
+            continue  # dead stream (e.g. previous employer); never project
+        det = detect_monthly_salary(hist)
+        if det is not None:
+            streams.append(det)
+    return streams
+
+
+def _project_stream(det: dict, date_override: date | None, amount: Decimal,
+                    request_date: date, window_end: date) -> list[dict]:
+    if date_override is not None:
+        first = date_override
+    else:
+        first = _add_months(det["last_date"], 1)
+        # fast-forward if last pay was long ago (e.g. data gap)
+        months_ahead = 0
+        while first < request_date and months_ahead < 14:
+            first = _add_months(first, 1)
+            months_ahead += 1
+    occ: list[dict] = []
+    d = first
+    for _ in range(6):
+        if d > window_end:
+            break
+        if d >= request_date:
+            occ.append({"date": d, "amount": amount, "kind": "projected_salary"})
+        d = _add_months(d, 1)
+    return occ
+
+
 def project_salary_occurrences(
     all_events: list[dict],
     messages: list[dict],
@@ -220,36 +314,29 @@ def project_salary_occurrences(
     request_date: date,
     window_end: date,
 ) -> list[dict]:
-    hist, final_pay = _settled_salary_history(all_events, user_id, home, fx_idx, ocr)
+    _hist, final_pay = _settled_salary_history(all_events, user_id, home, fx_idx, ocr)
     if final_pay is not None and final_pay < request_date:
         return []  # 'Final employer payroll' already paid: job ended, no projection
     if income_stopped_by_message(messages, user_id, request_date):
         return []  # explicit cancellation wins over history
-    det = detect_monthly_salary(hist)
-    if det is None:
+    streams = _detect_streams(all_events, user_id, home, fx_idx, ocr)
+    if not streams:
         return []
-    amt_override, date_override = parse_payroll_override(
-        messages, user_id, request_date, det["last_amount"]
+    # Amount override is plausibility-gated per stream; the date override
+    # (explicit payroll-date move) is shared across live streams.
+    largest = max(streams, key=lambda s: s["last_amount"])
+    _amt0, date_override = parse_payroll_override(
+        messages, user_id, request_date, largest["last_amount"]
     )
-    amount = amt_override or det["last_amount"]
-    interval = det["interval"]
     occ: list[dict] = []
-    if date_override is not None:
-        first = date_override
-    else:
-        first = det["last_date"] + timedelta(days=interval)
-        # fast-forward if last pay was long ago (e.g. data gap)
-        while first < request_date:
-            first += timedelta(days=interval)
-            if (first - det["last_date"]).days > 400:
-                break
-    d = first
-    steps = 0
-    while d <= window_end and steps < 6:
-        if d >= request_date:
-            occ.append({"date": d, "amount": amount, "kind": "projected_salary"})
-        d += timedelta(days=interval)
-        steps += 1
+    for det in sorted(streams, key=lambda s: s["last_amount"], reverse=True):
+        amt_override, _d0 = parse_payroll_override(
+            messages, user_id, request_date, det["last_amount"]
+        )
+        occ.extend(_project_stream(det, date_override,
+                                   amt_override or det["last_amount"],
+                                   request_date, window_end))
+    occ.sort(key=lambda o: (o["date"], str(o["amount"])))
     return occ
 
 
