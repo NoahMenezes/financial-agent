@@ -67,6 +67,10 @@ INSTRUCTION_PATTERNS = (
     r"\boverride\b",
     r"\bapprove\s+this\b",
     r"\bdo\s+not\s+follow\b",
+    r"\bbypass\b",
+    r"\bjailbreak\b",
+    r"\bsystem\s+prompt\b",
+    r"\babaikan\b",
 )
 
 

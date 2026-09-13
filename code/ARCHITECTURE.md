@@ -54,6 +54,8 @@ so each stage is independently re-runnable and testable.
 | `code/decide.py` | Eligibility gates, whole-months installment check, 6-step ranking, templated explanations | No |
 | `code/validate.py` | Deterministic output validator (schema, bounds, plan sums, installment match, flexible-only changes) | No |
 | `code/usage_tracker.py` | `log_call()` → `code/state/usage_log.json` → `evaluation/usage_report.md` | Logging only |
+| `code/explain_card.py` | DIFFERENTIATOR: read-only audit cards from states+forecasts+output.csv → `evaluation/decision_cards.md` (no recompute, output.csv unchanged) | No |
+| `code/whatif.py` | DIFFERENTIATOR: what-if safety simulator reusing `forecast.safety.is_safe_with_payments` | No |
 | `code/eval_samples.py` | Diagnostic self-score on the 25 solved samples (never eval labels) | No |
 | `code/tests/` | 30 unit tests (`safety, solver, spending, income, ranking, vision`) | No (1 mocked) |
 

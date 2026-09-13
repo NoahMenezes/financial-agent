@@ -49,6 +49,9 @@ code/.venv/bin/python code/stage3_decide_and_validate.py
 (cd code && ./.venv/bin/python -m unittest discover -s tests -v)
 # tests (no venv / system python):
 (cd code && python3 -m unittest discover -s tests -v)
+# differentiators (read-only, never touch output.csv):
+code/.venv/bin/python code/explain_card.py --limit 10   # audit cards -> evaluation/decision_cards.md
+code/.venv/bin/python code/whatif.py --request request_28 --amount 500 --date 2024-06-10
 ```
 
 This reads `dataset/` (read-only), writes `code/state/*.json` intermediates,
@@ -73,6 +76,8 @@ code/
   decide.py / validate.py     engines reused by Stage 3 (ranking, checks)
   eval_samples.py             diagnostic self-score on the 25 solved samples (not eval)
   verify_images.py            one-time RapidOCR cross-check of the 16 cached amounts
+  explain_card.py             DIFFERENTIATOR: read-only audit cards -> evaluation/decision_cards.md
+  whatif.py                   DIFFERENTIATOR: what-if safety simulator (same safety predicate)
   state/                        generated at runtime, NOT hand-edited
 evaluation/                     SIBLING of code/ (required zip layout)
 ```
