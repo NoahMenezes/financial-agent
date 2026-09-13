@@ -26,7 +26,7 @@ CODE_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(CODE_DIR))
 
 from common import (  # noqa: E402
-    CODE_DIR as _CD, EVAL_DIR, FORECASTS_JSON, OUTPUT_CSV, REPO_ROOT,
+    EVAL_DIR, FORECASTS_JSON, OUTPUT_CSV, REPO_ROOT,
     STATES_JSON, STATE_DIR, installment_last_date, load_options,
     load_requests, months_span, parse_date,
 )

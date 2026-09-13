@@ -80,12 +80,6 @@ def _provider_config() -> tuple[str, str, str, list[str]]:
     return provider, base_url, model, keys
 
 
-def _api_config() -> tuple[str, str, str]:
-    """Backwards-compatible single-key view (first rotation candidate)."""
-    _provider, base_url, model, keys = _provider_config()
-    return base_url, model, keys[0]
-
-
 def _call_vision_model(image_path: Path, image_id: str) -> tuple[float, str, int, int]:
     """Real live vision-model call. Returns (amount, currency, in_tok, out_tok).
 

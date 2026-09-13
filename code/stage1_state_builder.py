@@ -22,7 +22,6 @@ from common import (  # noqa: E402
     STATES_JSON,
     STATE_DIR,
     load_events,
-    load_requests,
 )
 import vision_extract  # noqa: E402
 from state_builder import build_all_states  # noqa: E402
@@ -35,10 +34,8 @@ def build_states(user_ids: list[str] | None = None) -> dict:
     blanks = {e["event_id"] for e in events if not (e.get("amount") or "").strip()}
     vision_extract.ensure_cache_for_events(blanks)
     # 2) Build states with the tested engine (reads vision via compat shim).
-    # Spec: one object per user in financial_profiles.csv. Default to ALL users
-    # so user_financial_states.json covers profiles beyond the eval requests.
-    if user_ids is None:
-        user_ids = None  # build_all_states defaults to all profiles
+    # Spec: one object per user in financial_profiles.csv. Default (None)
+    # builds ALL profiles so the file covers users beyond eval requests.
     states = build_all_states(user_ids)
     with open(STATES_JSON, "w", encoding="utf-8") as fh:
         json.dump(states, fh, indent=1, sort_keys=True, default=str)
